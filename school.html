@@ -3,17 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online School | Shepherd's Gate Missions</title>
+    <title>Online School & Music Ministry | Shepherd's Gate Missions</title>
+    <!-- Luxury Typography: Montserrat for clean UI, Cormorant Garamond for elegant editorial headers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="mobile-header">
-        <h1>Shepherd's Gate Missions</h1>
-    </header>
+
+    <!-- Cinematic Hero Banner -->
+    <div class="hero-banner">
+        
+        <!-- Frosted Glass Overlaid Header -->
+        <header class="top-header glass-header fade-in-down">
+            <div class="container header-container">
+                <a href="index.html" class="header-logo">
+                    <svg viewBox="0 0 100 100" width="45" height="45" aria-hidden="true" class="logo-icon">
+                        <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+                        <path d="M10 90 H90" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M50 20 V80 M32 42 H68" stroke="#D4AF37" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    <h1>Shepherd's Gate Missions</h1>
+                </a>
+            </div>
+        </header>
+
+        <!-- Banner image with continuous zoom in/out animation -->
+        <img class="hero-bg-img" src="cross-banner.jpg" alt="Christian Cross silhouette against a beautiful sky">
+        <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Main Layout Wrapper -->
     <div class="container layout-wrapper">
-        <aside class="sidebar">
-            <h1 class="desktop-title">Shepherd's Gate Missions</h1>
-            <nav>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar fade-in-up delay-1">
+            <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="missions.html">Shepherds Gate Missions</a></li>
@@ -23,148 +50,153 @@
                     <li><a href="bible-study.html">Bible Study</a></li>
                     <li><a href="counseling.html">Christian Counseling</a></li>
                     <li><a href="prayer.html">Prayer</a></li>
-                    <li><a href="school.html">Online School</a></li>
+                    <li><a href="school.html" class="active">Online School</a></li>
                     <li><a href="contact.html">Contact / Donations</a></li>
                     <li><a href="estore.html">eStore</a></li>
                 </ul>
             </nav>
         </aside>
+        
         <main>
-            <section class="content-block">
+            <section class="content-block fade-in-up delay-2">
                 <h2>Online School</h2>
-<p>This page is under construction</p>
+                
+                <!-- Notice Banner -->
+                <div style="background: rgba(212, 175, 55, 0.08); border-left: 4px solid var(--accent-color); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 3rem;">
+                    <strong style="color: var(--primary-color); font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">Academy Update & Direct Inquiries</strong>
+                    <p style="margin-bottom: 0.5rem; font-size: 0.95rem;">This page is currently under construction. For any questions regarding education programs, please reach out to <a href="mailto:contact@shepherdsgatemissions.com" style="font-weight: 600;">contact@shepherdsgatemissions.com</a>.</p>
+                </div>
 
-<p>Please feel free to send an email for any questions.</p>
+                <!-- Recommended Educational Resources -->
+                <h3 class="label-accent" style="font-size: 1.1rem; margin-bottom: 1.5rem;">Recommended Academic & Spiritual Resources</h3>
 
-<p>contact@shepherdsgatemission.com</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
+                    <!-- Resource 1 -->
+                    <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--primary-color); margin-bottom: 0.25rem;">Community Relational Soul Care</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; margin-bottom: 0.75rem;">By Dr. Julie A. Larsen</p>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Restoring God's people to spiritual vitality through holistic care principles.</p>
+                        <a href="https://www.Drjulielarsencrsc.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 600;">Visit DrJulieLarsenCRSC.com &rarr;</a>
+                    </div>
 
-<p>SGM recommends:</p>
+                    <!-- Resource 2 -->
+                    <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--primary-color); margin-bottom: 0.25rem;">Liberty University & Academy</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; margin-bottom: 0.75rem;">Lynchburg, VA</p>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Premier Christian higher education and K-12 accredited online homeschooling programs.</p>
+                        <a href="https://www.liberty.edu/onlineacademy/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 600;">Explore Liberty Academy &rarr;</a>
+                    </div>
 
-<p>www.Drjulielarsencrsc.com for</p>
+                    <!-- Resource 3 -->
+                    <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--primary-color); margin-bottom: 0.25rem;">Light University & AACC</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; margin-bottom: 0.75rem;">Dr. Tim Clinton, President</p>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Online Christian counseling coursework and literature, including <em>The New Christian Counselor</em>.</p>
+                        <a href="https://www.aacc.net" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 600;">Visit AACC.net &rarr;</a>
+                    </div>
 
-<p>Community Relational Soul Care: Restoring God's People to Spiritual Vitality</p>
+                    <!-- Resource 4 -->
+                    <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--primary-color); margin-bottom: 0.25rem;">Holy Land Photos & Atlas</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; margin-bottom: 0.75rem;">Dr. Carl G. Rasmussen</p>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Biblical archaeology, geography, photography, and <em>The Zondervan Atlas of the Bible</em>.</p>
+                        <a href="http://www.holylandphotos.org" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 600;">Visit HolyLandPhotos.org &rarr;</a>
+                    </div>
 
-<p>Liberty University Online Academy,</p>
+                    <!-- Resource 5 -->
+                    <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--primary-color); margin-bottom: 0.25rem;">Experiencing God Studies</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; margin-bottom: 0.75rem;">Dr. Henry Blackaby & Dr. Claude King</p>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Transformational spiritual discipleship works: <em>Experiencing God</em> and <em>Created to be God’s Friend</em>.</p>
+                        <a href="https://www.kingiscoming.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 600;">Visit KingIsComing.com &rarr;</a>
+                    </div>
+                </div>
 
-<p>www.liberty.edu/onlineacademy/</p>
+                <hr style="border: 0; height: 1px; background: var(--border-color); margin: 3rem 0;">
 
-<p>(Online homeschooling and high school)</p>
+                <!-- Legacy of SGM Online Academy -->
+                <h3 class="label-accent" style="font-size: 1.1rem; margin-bottom: 1.5rem;">Legacy of Shepherd's Gate Online Academy</h3>
 
-<p>Liberty University</p>
+                <div style="background: var(--bg-page); padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); margin-bottom: 3.5rem;">
+                    <p style="font-size: 1.05rem; margin-bottom: 1.25rem;"><strong>SHEPHERD'S GATE MISSIONS ONLINE ACADEMY</strong> has closed as SGM pivoted its focus toward direct Christian counseling and emergency relief programs. We extend our deepest gratitude to all the dedicated instructors who helped countless students gain a new start in life.</p>
+                    
+                    <p style="font-size: 0.95rem; margin-bottom: 1.25rem;">The SGM Online Academy had been active since 2008. Dr. Julie Larsen began teaching online literacy and computer skills in 1992, beginning with special education students in Lutheran primary schools, expanding in 1998 to adult workplace computer instruction, and establishing SGM courses in 2008 for older beginners.</p>
 
-<p>, Lynchburg, VA; www.Liberty.edu</p>
+                    <p style="font-size: 0.95rem; margin: 0;">Because all courses were provided free of charge as part of SGM’s 501(c)(3) public charity mission, rising operational demands required transitioning students to external accredited partners. SGM continues to welcome donations to support its ongoing crisis relief and counseling programs.</p>
+                </div>
 
-<p>Light University-American Association Christian Counselors</p>
+                <hr style="border: 0; height: 1px; background: var(--border-color); margin: 3rem 0;">
 
-<p>www.AACC.net</p>
+                <!-- Music Ministry Section -->
+                <h3 class="label-accent" style="font-size: 1.1rem; margin-bottom: 1.5rem;">Music Ministry & Sacred Hymnody</h3>
 
-<p>Online school and books, Dr Tim Clinton, president</p>
+                <p style="margin-bottom: 1.5rem;">SGM is dedicated to preserving the rich history and spiritual heritage behind timeless Christian hymns. Scripture commands us to speak to one another in psalms, hymns, and spiritual songs, making melody in our hearts to the Lord.</p>
 
-<p>Dr Tim Clinton, Dr Ron Hawkins,</p>
+                <!-- Scripture Quotes Box -->
+                <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); margin-bottom: 3rem;">
+                    <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1rem;">Biblical Foundations of Praise</h4>
+                    
+                    <ul style="list-style: none; padding-left: 0; font-size: 0.95rem;">
+                        <li style="margin-bottom: 1rem; border-bottom: 1px solid var(--bg-page); padding-bottom: 0.75rem;">
+                            “Speaking to yourselves in psalms and hymns and spiritual songs, singing and making melody in your heart to the Lord; Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ” 
+                            <strong style="color: var(--accent-color); display: block; margin-top: 0.25rem;">— Ephesians 5:19–20</strong>
+                        </li>
+                        <li style="margin-bottom: 1rem; border-bottom: 1px solid var(--bg-page); padding-bottom: 0.75rem;">
+                            “Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord.” 
+                            <strong style="color: var(--accent-color); display: block; margin-top: 0.25rem;">— Colossians 3:16</strong>
+                        </li>
+                        <li style="margin-bottom: 0;">
+                            “Give thanks unto the LORD, call upon his name, make known his deeds among the people. Sing unto Him, sing psalms unto him, talk ye of all his wondrous works.” 
+                            <strong style="color: var(--accent-color); display: block; margin-top: 0.25rem;">— 1 Chronicles 16:8–9 (See also Psalms 95:2, 105:2)</strong>
+                        </li>
+                    </ul>
+                </div>
 
-<p>The New Christian Counselor</p>
+                <!-- Hymn Stories Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                    
+                    <!-- Amazing Grace Story -->
+                    <div style="background: var(--bg-page); padding: 2.25rem; border-radius: var(--radius-lg); border-top: 4px solid var(--accent-color); box-shadow: var(--shadow-soft);">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--primary-color); margin-bottom: 0.25rem;">Amazing Grace</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem;">John Newton (1779)</p>
 
-<p>Holy Land Photos</p>
+                        <p style="font-size: 0.925rem; margin-bottom: 1rem;">Nurtured in faith by his godly mother before her early death, John Newton later lived a wild life on the high seas as a press-ganged sailor and slave trader. On March 9–10, 1748, a violent sea storm threatened his ship with destruction. In desperation, 23-year-old Newton cried out to God for mercy and was delivered out of deep waters.</p>
 
-<p>: www.holylandphotos.org by Dr Carl RasmussenEducation with archeology, pictures, and information about the Bible.</p>
+                        <p style="font-size: 0.925rem; margin-bottom: 1.25rem;">Newton grew into a powerful evangelical minister and abolitionist. Originally titled <em>"Faith’s Review and Expectation,"</em> the hymn was written from his study of 1 Chronicles 17:16–17 (<em>"Who am I, O Lord God... that You have brought me this far?"</em>).</p>
 
-<p>Dr Carl G. Rasmussen</p>
+                        <!-- Stanza Quote -->
+                        <div style="background: #FFFFFF; padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--primary-color);">
+                            "The earth shall soon dissolve like snow,<br>
+                            The sun forbear to shine;<br>
+                            But God, Who called me here below,<br>
+                            Shall be forever mine."
+                        </div>
+                    </div>
 
-<p>The Zondervan Atlas of the Bible</p>
+                    <!-- It Is Well Story -->
+                    <div style="background: var(--bg-page); padding: 2.25rem; border-radius: var(--radius-lg); border-top: 4px solid var(--secondary-color); box-shadow: var(--shadow-soft);">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--primary-color); margin-bottom: 0.25rem;">It Is Well with My Soul</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem;">Horatio G. Spafford (1873)</p>
 
-<p>, Grand
-Rapids: Zondervan, 2010</p>
+                        <p style="font-size: 0.925rem; margin-bottom: 1rem;">Following the Great Chicago Fire of 1871 and the sudden death of his young son, Chicago attorney Horatio Spafford sent his wife Anna and four daughters (Maggie, Tanetta, Annie, and Bessie) ahead on the French liner <em>Ville du Havre</em> for a European retreat.</p>
 
-<p>The King Is Coming</p>
+                        <p style="font-size: 0.925rem; margin-bottom: 1.25rem;">On November 22, 1873, the vessel collided with an iron ship and sank in 12 minutes. All four daughters perished. Arriving safely in Wales, Anna cabled her husband two words: <em>"Saved Alone."</em> Sailing across the Atlantic to join her, Spafford penned these words near the location of the wreck: <em>"It is well; the will of God be done."</em></p>
 
-<p>: www.kingiscoming.com</p>
+                        <!-- Stanza Quote -->
+                        <div style="background: #FFFFFF; padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--secondary-color); font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--primary-color);">
+                            "When sorrow like sea billows roll;<br>
+                            Whatever my lot, Thou hast taught me to say,<br>
+                            It is well, it is well with my soul."
+                        </div>
+                    </div>
 
-<p>Dr Henry T. Blackaby and Dr. Claude V. King;</p>
-
-<p>Experiencing
-God: Knowing and Doing the Will of God</p>
-
-<p>Dr Henry T. Blackaby;</p>
-
-<p>Created to be God’s Friend</p>
-
-<p>SHEPHERDS GATE MISSIONS ONLINE ACADEMY has been closed due to other opportunities to help people. I want to thank all the teachers involved who helped many people get a new start in life. Please see above the recommendations for further schooling.</p>
-
-<p>SGM
-online academy had been in existence since 2008. Julie Larsen has been teaching
-online literacy and computer classes since 1992. Special to her heart was
-teaching the mentally challenged-starting out at a Lutheran school up through
-grade eight. Then, in 1998 teaching computer for work skills for all ages and when SGM was formed in 2008 classes were added for the older beginner.</p>
-
-<p>All classes had been on an individual basis to meet a person's needs. Any questions email: contact@shepherdsgatemissions.com. New teachers had been added to keep up with the increased enrollment, but there were not enough funds to keep the school going, as all classes were free of charge. Shepherd's Gate Mission's, Inc. is a non-profit 501 (C) 3 public charity corporation and welcomes donations to help support its projects and programs for the needy. Please email and leave a message for any questions, thank you.</p>
-
-<p>Musick Ministry</p>
-
-<p>This site will give the readers information about songs and background information. In the future SGM will have music playing on the web. This fall SGM will have a teacher to give lessons to children.</p>
-
-<p>We are to have psalms, hymns, spiritual songs, singing and making melody in your heart to the LORD</p>
-
-<p>. Eph 5:19-20 Speaking to yourselves in psalms and hymns and spiritual songs and making melody in yourheart to the LORD; Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ; Col 3:16 Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your heart to the LORD. 1Ch. 16:8-9 Give thanks unto the LORD, call upon his name, make known his deeds among the people. Sing unto Him, sing psalms unto him, talk of all his wondrous works. Ps 95:2 Let us come before his presence with thanksgiving, and make a joyful noise unto Him with psalms. Ps</p>
-
-<p>105:2</p>
-
-<p>Sing unto Him, sing psalms unto him: talk ye of all his wondrous works.</p>
-
-<p>Amazing Grace</p>
-
-<p>1779</p>
-
-<p>t’s hard to shake off a mother’s influence.  John Newton’s earliest memories were of his godly mother who, despite fragile health, devoted herself to nurturing his soul. At her knee he memorized Bible passages and hymns. Though she died when he was about seven, he later recalled her tearfulprayers for him.</p>
-
-<p>After her death, John alternated between boarding school and the high seas, wanting to live a good life but nonetheless falling deeper and deeper into sin.  Pressed into service with the British Navy, he deserted, was captured, and after two days of suspense, was flogged.  His subsequent thoughts vacillated between murder and suicide.  “I was capable of anything,” he recalled.</p>
-
-<p>More voyages, dangers, toils, and snares followed. It was a life unrivaled in fiction. Then, on the night of March 9,1748, John, 23, was jolted awake by a brutal storm that descended too suddenly for the crew to foresee. The next day, in great peril, he cried to the Lord. He later wrote, “That tenth of March is a day much remembered by me;and I have never suffered it to pass unnoticed since the year 1748-the Lord came from on high and delivered me out of deep waters.”</p>
-
-<p>The next several years saw slow, halting spiritual growth in John, but in the end he became one of the most powerful evangelical preachers in British history, a powerful foe of slavery, and the author of hundreds of hymns.</p>
-
-<p>Here are some things you may not know about Newton’s most famous hymn. His title for it wasn’t originally “Amazing Grace” but “Faith’s Review and Expectation.”  It is based in Newton’s study of 1 Chronicles 17:16-17: “King David . . . said: ‘Who am I, O Lord God?  And what is my house, that You have brought me this far? And yet . You have also spoken of Your servant’s house for a great while to come, and have regarded me according to the rank of a man of highdegree . . ..”</p>
-
-<p>And here’s a nearly forgotten verse that Newton added near the end of “Amazing Grace.”</p>
-
-<p>The earth shall soon dissolve like snow, the sun forbear to shine;</p>
-
-<p>But God, Who called me here below, shall be forever mine.</p>
-
-<p>It Is Well with My Soul 1873</p>
-
-<p>henthe great Chicago fire consumed the Windy City in 1871, Horatio G. Spafford, an attorney heavily invested in real estate, lost a fortune. About that time, his only son, age 4, succumbed to scarlet fever. Horatio drowned his grief in work, pouring himself into rebuilding thecity and assisting the 100,000 who had been left homeless.</p>
-
-<p>In November of 1873, he decided to take his wife and daughters to Europe.  Horatio was close to D. L. Moody and Ira Sankey, and he wanted to visit their evangelistic meetings in England, than enjoy a vacation.</p>
-
-<p>When an urgent matter detained Horatio in New York, he decided to send his wife, Anna, and their four daughters, Maggie, Tanetta, Annie, and Bessie, on a head.  As he saw them settled into a cabin aboard the luxurious French liner</p>
-
-<p>Ville du Havre</p>
-
-<p>, an uneasefilled his mind, and moved them to a room closer to the bow of the ship. Then he said good-bye. Promising to join them soon.</p>
-
-<p>During the small hours of November 22, 1873, as the</p>
-
-<p>Ville du Havre</p>
-
-<p>glided over smooth seas, the passengers were jolted from their bunks. The ship had collided with an iron sailing vessel, and water poured in like Niagara. The</p>
-
-<p>Ville du Havre</p>
-
-<p>tilted dangerously. Screams, Prayers, and oaths merged into a nightmare of unmeasured terror.  Passengers clung to posts, tumbled through darkness, and wereswept away by powerful currents of icy ocean. Loved ones fell from each other’s grasp and disappeared into foaming blackness.  Within two hours, the mighty ship vanished beneath the waters.  The226 fatalities included Maggie, Tanetta, Annie and Bessie. Mrs. Spafford was found nearly unconscious, clinging to a piece of the wreckage.  When the 47 survivors landed in Cardiff, Wales, she cabled her husband: “Saved Alone.”</p>
-
-<p>Horatio immediately booked passage to join his wife. Enroute, on a cold December night, the captain called him aside and said, “I believe we are now passing over the place where the</p>
-
-<p>Ville du Havre</p>
-
-<p>went down.”  Spafford went to his cabin but found it hard to sleep.  He said to himself, “It is well; the will of God be done.”  He later wrote his famous hymn based on those words.</p>
-
-<p>The melody for “It Is Well,” titled VILLE DUHAVRE, written by Philip Bliss who was himself soon to perish, along with his wife, in a terrible train wreck in Ohio.</p>
-
+                </div>
 
             </section>
         </main>
     </div>
-    <footer>
+    
+    <footer class="fade-in-up delay-4">
         <div class="container">
             <p class="blessing">Unto Him that loved us, and washed us from our sins in his own blood, And hath made us kings and priests unto GOD and his Father; to Him be the glory and dominion for ever and ever. Amen. May the LORD bless you and keep you as together we will help one another and get the Gospel around the world.</p>
             <p class="copyright"><strong>Copyright Notice:</strong> Thank you for your purchase! All resource material, including books and products from J.L.Divine Designs are under copyright of Shepherd's Gate Mission's, Inc. Products from J.L.Divine Designs are to support Shepherd's Gate Mission's, Inc. Illegal copying for sale in any form will be pursued.</p>
