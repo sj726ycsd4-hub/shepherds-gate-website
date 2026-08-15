@@ -8,74 +8,41 @@
 </head>
 <body>
 
-    <!-- Majestic Hero Banner Spanning the Top -->
-    <div class="hero-banner">
-        <!-- SVG Graphic: Calvary Hill, Crosses, and Radiant Sunrise -->
-        <svg class="hero-bg" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-                <!-- Sunrise Gradient Background -->
-                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#1A365D"/>
-                    <stop offset="50%" stop-color="#2B6CB0"/>
-                    <stop offset="100%" stop-color="#D69E2E"/>
-                </linearGradient>
-                <!-- Glowing Light behind the Cross -->
-                <radialGradient id="sun" cx="50%" cy="100%" r="80%">
-                    <stop offset="0%" stop-color="#FFFBEB" stop-opacity="1"/>
-                    <stop offset="40%" stop-color="#FBD38D" stop-opacity="0.8"/>
-                    <stop offset="100%" stop-color="#D69E2E" stop-opacity="0"/>
-                </radialGradient>
-            </defs>
-            <!-- Background Sky -->
-            <rect width="100%" height="100%" fill="url(#sky)"/>
-            <rect width="100%" height="100%" fill="url(#sun)"/>
-            
-            <!-- Calvary Hill Silhouette -->
-            <path d="M0 400 Q 720 200 1440 400 Z" fill="#1A202C"/>
-            
-            <!-- Center Cross (Jesus) -->
-            <path d="M720 100 V320 M660 150 H780" stroke="#1A202C" stroke-width="16" stroke-linecap="square"/>
-            <!-- Left Cross -->
-            <path d="M600 180 V320 M560 210 H640" stroke="#1A202C" stroke-width="10" stroke-linecap="square"/>
-            <!-- Right Cross -->
-            <path d="M840 180 V320 M800 210 H880" stroke="#1A202C" stroke-width="10" stroke-linecap="square"/>
-        </svg>
+    <!-- Premium Top Brand Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <!-- Refined Logo Graphic -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="45" height="45" aria-hidden="true">
+                    <!-- Subtle Gate Arch -->
+                    <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="#0F172A" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M10 90 H90" stroke="#0F172A" stroke-width="4" stroke-linecap="round"/>
+                    <!-- Elegant Gold Cross -->
+                    <path d="M50 20 V80 M32 42 H68" stroke="#C5A059" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Shepherd's Crook -->
+                    <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="#0F172A" stroke-width="3" fill="none" stroke-linecap="round"/>
+                </svg>
+                <div class="logo-text">
+                    <h1>Shepherd's Gate Missions</h1>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <!-- Photographic Hero Banner (Image controlled in CSS) -->
+    <div class="hero-banner">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Shepherd's Gate Missions</h1>
-            <p>Restoring God's People to Spiritual Vitality</p>
+            <!-- The tagline "Restoring God's People" has been removed here -->
         </div>
     </div>
 
-    <!-- Main Layout Wrapper -->
+    <!-- Main Editorial Layout -->
     <div class="container layout-wrapper">
         
-        <!-- Sidebar with Redesigned Logo -->
+        <!-- Clean, focused sidebar navigation -->
         <aside class="sidebar">
-            <div class="nav-brand">
-                <!-- Custom Logo: Gate, Cross, and Shepherd's Crook -->
-                <svg class="nav-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <defs>
-                        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#F6E05E" />
-                            <stop offset="100%" stop-color="#B7791F" />
-                        </linearGradient>
-                        <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#2B6CB0" />
-                            <stop offset="100%" stop-color="#1A365D" />
-                        </linearGradient>
-                    </defs>
-                    <!-- The Gate Arch -->
-                    <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="url(#navyGrad)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                    <path d="M10 90 H90" stroke="url(#navyGrad)" stroke-width="6" stroke-linecap="round"/>
-                    <!-- The Central Golden Cross -->
-                    <path d="M50 20 V80 M32 42 H68" stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                    <!-- The Shepherd's Crook wrapping the cross -->
-                    <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="url(#navyGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
-                </svg>
-                <h2>Shepherd's Gate</h2>
-            </div>
-            
             <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
