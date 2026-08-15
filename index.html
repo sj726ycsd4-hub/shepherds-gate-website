@@ -1,273 +1,115 @@
-/* ==========================================================================
-   CSS Variables & Base Reset
-   ========================================================================== */
-:root {
-    --primary-color: #1A365D; 
-    --secondary-color: #2B6CB0; 
-    --accent-color: #D69E2E; 
-    --text-dark: #1A202C; 
-    --text-body: #4A5568; 
-    --bg-page: #F7FAFC; 
-    --bg-card: #FFFFFF;
-    --border-color: #E2E8F0;
-    --radius-md: 8px;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Shepherd's Gate Missions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <!-- Majestic Hero Banner Spanning the Top -->
+    <div class="hero-banner">
+        <!-- SVG Graphic: Calvary Hill, Crosses, and Radiant Sunrise -->
+        <svg class="hero-bg" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+                <!-- Sunrise Gradient Background -->
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1A365D"/>
+                    <stop offset="50%" stop-color="#2B6CB0"/>
+                    <stop offset="100%" stop-color="#D69E2E"/>
+                </linearGradient>
+                <!-- Glowing Light behind the Cross -->
+                <radialGradient id="sun" cx="50%" cy="100%" r="80%">
+                    <stop offset="0%" stop-color="#FFFBEB" stop-opacity="1"/>
+                    <stop offset="40%" stop-color="#FBD38D" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#D69E2E" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <!-- Background Sky -->
+            <rect width="100%" height="100%" fill="url(#sky)"/>
+            <rect width="100%" height="100%" fill="url(#sun)"/>
+            
+            <!-- Calvary Hill Silhouette -->
+            <path d="M0 400 Q 720 200 1440 400 Z" fill="#1A202C"/>
+            
+            <!-- Center Cross (Jesus) -->
+            <path d="M720 100 V320 M660 150 H780" stroke="#1A202C" stroke-width="16" stroke-linecap="square"/>
+            <!-- Left Cross -->
+            <path d="M600 180 V320 M560 210 H640" stroke="#1A202C" stroke-width="10" stroke-linecap="square"/>
+            <!-- Right Cross -->
+            <path d="M840 180 V320 M800 210 H880" stroke="#1A202C" stroke-width="10" stroke-linecap="square"/>
+        </svg>
 
-body {
-    background-color: var(--bg-page);
-    color: var(--text-body);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.7;
-    font-size: 16px;
-    overflow-x: hidden; 
-}
+        <div class="hero-content">
+            <h1>Shepherd's Gate Missions</h1>
+        </div>
+    </div>
 
-img, svg {
-    max-width: 100%;
-    height: auto;
-}
+    <!-- Main Layout Wrapper -->
+    <div class="container layout-wrapper">
+        
+        <!-- Sidebar with Redesigned Logo -->
+        <aside class="sidebar">
+            <div class="nav-brand">
+                <!-- Custom Logo: Gate, Cross, and Shepherd's Crook -->
+                <svg class="nav-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#F6E05E" />
+                            <stop offset="100%" stop-color="#B7791F" />
+                        </linearGradient>
+                        <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#2B6CB0" />
+                            <stop offset="100%" stop-color="#1A365D" />
+                        </linearGradient>
+                    </defs>
+                    <!-- The Gate Arch -->
+                    <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="url(#navyGrad)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                    <path d="M10 90 H90" stroke="url(#navyGrad)" stroke-width="6" stroke-linecap="round"/>
+                    <!-- The Central Golden Cross -->
+                    <path d="M50 20 V80 M32 42 H68" stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- The Shepherd's Crook wrapping the cross -->
+                    <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="url(#navyGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+                </svg>
+                <h2>Shepherd's Gate</h2>
+            </div>
+            
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="missions.html">Shepherds Gate Missions</a></li>
+                    <li><a href="president.html">About President of SGM</a></li>
+                    <li><a href="accountability.html">Accountability</a></li>
+                    <li><a href="devotions.html">Closerwalk Devotions</a></li>
+                    <li><a href="bible-study.html">Bible Study</a></li>
+                    <li><a href="counseling.html">Christian Counseling</a></li>
+                    <li><a href="prayer.html">Prayer</a></li>
+                    <li><a href="school.html">Online School</a></li>
+                    <li><a href="contact.html">Contact / Donations</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main>
+            <section class="content-block">
+                <h2>Welcome Home</h2>
+                <p>Shepherd's Gate Mission's, Inc. is a non-profit 501 (C) 3 Corporation ministering to the needs of people through SGM, it's projects, and programs. These projects and programs minister to children through adults and might include help with clothes, food, basic learning skills, and/or counseling to guide people to make better choices. All projects and programs are free of charge as SGM is a federal tax exempt public charity and gives a tax receipt for any monies or items donated. Anyone wanting to help people, please donate to Shepherd's Gate Mission's, Inc. and to email at contact@shepherdsgatemissions.com for the process until it is added to this site. SGM can give any material items to give to needy people and they can donate property, cars, and non-perishable food items; however, please contact SGM before you do this as certain items must be in usable condition.</p>
 
-h1, h2, h3 {
-    color: var(--text-dark);
-    font-family: 'Georgia', serif;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-}
+                <p>Please click the second button (Shepherds Gate Missions) on left for what SGM has done to help people over the years.</p>
 
-a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    transition: var(--transition);
-}
+                <p>SGM has many changes for 2023. We closed the online learning community center many years ago because of the lack of funds. However, SGM is now focused on Christian counseling that is still free of charge and will soon be online. Please just email (in the contacts) and someone will get back to you as soon as possible.</p>
 
-a:hover {
-    color: var(--primary-color);
-}
-
-/* ==========================================================================
-   Majestic Responsive Hero Banner
-   ========================================================================== */
-.hero-banner {
-    position: relative;
-    width: 100%;
-    height: clamp(250px, 40vh, 400px); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-bottom: 5px solid var(--accent-color);
-    background-color: var(--primary-color);
-}
-
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 0 1.5rem;
-    width: 100%;
-}
-
-.hero-content h1 {
-    font-size: clamp(1.8rem, 5vw + 1rem, 3.5rem);
-    color: #FFFFFF;
-    margin-bottom: 0;
-    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
-    letter-spacing: 1px;
-}
-
-/* ==========================================================================
-   Responsive Main Layout & Grid
-   ========================================================================== */
-.layout-wrapper {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-    display: grid;
-    grid-template-columns: minmax(260px, 1fr) 3fr; 
-    gap: 2.5rem;
-    align-items: start;
-}
-
-/* ==========================================================================
-   Sidebar & Navigation
-   ========================================================================== */
-.sidebar {
-    background-color: var(--bg-card);
-    padding: 2rem 1.5rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
-    position: sticky;
-    top: 2rem;
-}
-
-.nav-brand {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 1.5rem;
-}
-
-.nav-logo-svg {
-    width: clamp(70px, 10vw, 90px);
-    height: auto;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-}
-
-.nav-brand h2 {
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
-    color: var(--primary-color);
-    margin: 0;
-    line-height: 1.2;
-}
-
-.sidebar nav ul {
-    list-style: none;
-}
-
-.sidebar nav ul li {
-    margin-bottom: 0.5rem;
-}
-
-.sidebar nav ul li a {
-    display: flex;
-    align-items: center;
-    padding: 0.85rem 1rem;
-    color: var(--text-body);
-    font-weight: 500;
-    border-radius: 6px;
-    border-left: 4px solid transparent;
-    background-color: transparent;
-}
-
-.sidebar nav ul li a:hover,
-.sidebar nav ul li a:focus {
-    background-color: var(--bg-page);
-    color: var(--primary-color);
-    border-left: 4px solid var(--accent-color);
-    transform: translateX(6px);
-}
-
-/* ==========================================================================
-   Main Content Block (Cards)
-   ========================================================================== */
-.content-block {
-    background-color: var(--bg-card);
-    padding: clamp(1.5rem, 4vw, 3rem);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
-    width: 100%;
-}
-
-.content-block h2 {
-    color: var(--primary-color);
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-}
-
-.content-block p {
-    margin-bottom: 1.5rem;
-}
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-footer {
-    background-color: var(--primary-color);
-    color: #E2E8F0;
-    padding: 4rem 1.5rem;
-    margin-top: 5rem;
-    text-align: center;
-    border-top: 4px solid var(--accent-color);
-}
-
-footer .container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-footer .blessing {
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    font-style: italic;
-    font-family: 'Georgia', serif;
-    color: var(--accent-color);
-    margin-bottom: 2rem;
-    line-height: 1.8;
-}
-
-footer .copyright {
-    font-size: 0.85rem;
-    color: #A0AEC0;
-    border-top: 1px solid #2B6CB0;
-    padding-top: 1.5rem;
-}
-
-/* ==========================================================================
-   Media Queries (Responsive Breakpoints)
-   ========================================================================== */
-@media (max-width: 992px) {
-    .layout-wrapper {
-        grid-template-columns: 240px 1fr;
-        gap: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .layout-wrapper {
-        grid-template-columns: 1fr; 
-        margin: 1.5rem auto;
-    }
+                <p>Shepherd's Gate Mission's was founded for the purpose of helping people achieve a holistic life. We help people develop into servants and worshipers of GOD to have "an abundant life" that humans were created to enjoy.</p>
+            </section>
+        </main>
+    </div>
     
-    .sidebar {
-        position: relative; 
-        top: 0;
-        margin-bottom: 1rem;
-    }
-
-    .sidebar nav ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
-    }
-
-    .sidebar nav ul li {
-        margin-bottom: 0;
-    }
-    
-    .sidebar nav ul li a {
-        padding: 0.6rem;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .sidebar nav ul {
-        grid-template-columns: 1fr;
-    }
-}
+    <footer>
+        <div class="container">
+            <p class="blessing">Unto Him that loved us, and washed us from our sins in his own blood, And hath made us kings and priests unto GOD and his Father; to Him be the glory and dominion for ever and ever. Amen. May the LORD bless you and keep you as together we will help one another and get the Gospel around the world.</p>
+            <p class="copyright"><strong>Copyright Notice:</strong> Thank you for your purchase! All resource material, including books and products from J.L.Divine Designs are under copyright of Shepherd's Gate Mission's, Inc. Products from J.L.Divine Designs are to support Shepherd's Gate Mission's, Inc. Illegal copying for sale in any form will be pursued.</p>
+        </div>
+    </footer>
+</body>
+</html>
