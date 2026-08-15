@@ -195,7 +195,7 @@ a:hover {
 }
 
 /* ==========================================================================
-   Main Content Block & Featured Publication Card
+   Main Content Block & Clickable Featured Publication Card
    ========================================================================== */
 .content-block {
     background-color: var(--bg-card);
@@ -218,8 +218,8 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 
-/* Featured Book Styles */
-.book-feature-card {
+/* Clickable Book Card Styles */
+.book-feature-link {
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -230,12 +230,16 @@ a:hover {
     margin: 2rem 0;
     flex-wrap: wrap;
     box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
     transition: var(--transition);
 }
 
-.book-feature-card:hover {
+.book-feature-link:hover {
     box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    border-color: var(--secondary-color);
+    background: #FFFFFF;
 }
 
 .book-image-wrapper {
@@ -265,6 +269,16 @@ a:hover {
     font-weight: 600;
     color: var(--secondary-color);
     margin-bottom: 0.75rem;
+}
+
+.book-action-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+    display: inline-block;
 }
 
 /* ==========================================================================
