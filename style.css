@@ -423,9 +423,9 @@ footer .copyright {
     }
 
     .sidebar nav ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 0.5rem;
+        display: flex;
+        flex-direction: column; /* Forces exactly 1 link per line on all mobile screens */
+        gap: 0.25rem;
         padding: 1rem;
     }
 }
