@@ -4,19 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shepherds Gate Missions | Shepherd's Gate Missions</title>
+    <!-- Luxury Typography: Montserrat for clean UI, Cormorant Garamond for elegant editorial headers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="mobile-header">
-        <h1>Shepherd's Gate Missions</h1>
-    </header>
+
+    <!-- Cinematic Hero Banner -->
+    <div class="hero-banner">
+        
+        <!-- Frosted Glass Overlaid Header -->
+        <header class="top-header glass-header fade-in-down">
+            <div class="container header-container">
+                <a href="index.html" class="header-logo">
+                    <svg viewBox="0 0 100 100" width="45" height="45" aria-hidden="true" class="logo-icon">
+                        <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+                        <path d="M10 90 H90" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M50 20 V80 M32 42 H68" stroke="#D4AF37" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    <h1>Shepherd's Gate Missions</h1>
+                </a>
+            </div>
+        </header>
+
+        <!-- Banner image with continuous zoom in/out animation -->
+        <img class="hero-bg-img" src="cross-banner.jpg" alt="Christian Cross silhouette against a beautiful sky">
+        <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Main Layout Wrapper -->
     <div class="container layout-wrapper">
-        <aside class="sidebar">
-            <h1 class="desktop-title">Shepherd's Gate Missions</h1>
-            <nav>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar fade-in-up delay-1">
+            <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="missions.html">Shepherds Gate Missions</a></li>
+                    <li><a href="missions.html" class="active">Shepherds Gate Missions</a></li>
                     <li><a href="president.html">About President of SGM</a></li>
                     <li><a href="accountability.html">Accountability</a></li>
                     <li><a href="devotions.html">Closerwalk Devotions</a></li>
@@ -29,75 +56,57 @@
                 </ul>
             </nav>
         </aside>
+        
         <main>
-            <section class="content-block">
+            <section class="content-block fade-in-up delay-2">
                 <h2>Shepherds Gate Missions</h2>
-<p>OUR VISION and MISSION</p>
 
-<p>SHEPHERD'S GATE MISSION'S, INC.</p>
+                <h3 class="label-accent" style="margin-top: 1rem;">Our Vision and Mission</h3>
+                <p><strong>Shepherd's Gate Mission's, Inc.</strong> is a non-profit 501 (C) 3 Corporation federal tax exempt public charity ministering to people in need through SGM, its projects and programs. It is a family ministry.</p>
+                <p>One word from GOD can change your life. Shepherd's Gate Mission's, Inc. was founded for the purpose of helping people (hand up—not hand out) change their lives for the better and bringing the Word of GOD to the body of CHRIST, where they will develop into servants and worshipers of GOD as together we will change the world.</p>
 
-<p>is a non-profit 501 (C) 3 Corporation federal tax exempt public charity ministering to people in need through SGM, it's projects and programs. It is a family ministry.</p>
+                <hr style="border: 0; height: 1px; background: var(--border-color); margin: 3rem 0;">
 
-<p>One word from GOD can change your life. Shepherd's Gate 
-Mission's, Inc. was founded for the purpose of helping people (hand up-not hand out) change their lives for the better and bringing the Word of GOD to the 
-body of CHRIST, where they will 
-develop into servants and worshipers of GOD as together we will change the world.</p>
+                <h3 class="label-accent">Our Statement of Faith</h3>
+                <p><strong>We believe</strong> in, and live by, God the Father Almighty, Maker of heaven and earth and in Jesus Christ, His Son, Our Lord, Who was conceived by the Holy Ghost Through the Word of God and born of the virgin, Mary. He suffered under Pontius Pilate, was crucified dead and buried. He descended into Hell and He stripped Satan of his power. Upon the third day He rose again and Ascended into Heaven Where He is seated at the right hand of God the Father Almighty. We believe in the forgiveness of all sins, the resurrection of the body, the communion of the saints, and life everlasting. We believe that through a daily profession of faith and trust in the shed blood of Jesus Christ, His death, burial, resurrection, and ascension; one may become a partaker of their inheritance in Him.</p>
 
-<p>OUR STATEMENT of FAITH We believe</p>
+                <!-- Converted paragraph numbers into a clean, semantic ordered list for scannability -->
+                <ol style="margin-left: 1.5rem; margin-bottom: 2.5rem; color: var(--text-body);">
+                    <li style="margin-bottom: 1rem;"><strong>We believe that the Bible</strong> is the inspired Word of God written by holy men as they were instructed by God. It is the inerrant Word of God (2 Tim 3:15).</li>
+                    <li style="margin-bottom: 1rem;"><strong>We believe that Man</strong> was created good and upright, for God said, "Let us make man in Our own image, after Our likeness." But man, voluntarily transgressed against God, and God has provided man with his only hope of salvation and redemption which is in Jesus Christ, the Son of God (Gen. 1:26-31, 3:17, Rom. 5:12-21).</li>
+                    <li style="margin-bottom: 1rem;"><strong>We believe that Jesus</strong> came as a man, was born of a virgin, and His Father is God.</li>
+                    <li style="margin-bottom: 1rem;"><strong>We believe that Jesus</strong> was born without the inherited sin of Adam and, during his entire life, committed no sin. Jesus was the eternal Father made visible, apart from whom there is no God (I Tim. 3:16, John 10:30, Is. 9:6, Luke 2:11, Rev. 1:8).</li>
+                    <li style="margin-bottom: 1rem;"><strong>We believe in the personal salvation</strong> of believers through the confession of sins, recognizing that Jesus Christ is the substitute for our sins, through His shed blood. It is by the grace of God, through faith in Jesus Christ and His shed blood, that we become an heir of God (Rom. 10:9, 10, 1 John 1:9, Eph. 2:8,9).</li>
+                    <li style="margin-bottom: 1rem;"><strong>We believe that the New Birth</strong> is a direct witness of the Spirit and is an inward confession of Jesus Christ (Rom. 8:16).</li>
+                    <li style="margin-bottom: 1rem;"><strong>We believe that following salvation</strong> through Jesus Christ you should be baptized…as commanded by the Lord Jesus. This was the last command He left His apostles. "Go ye therefore, and teach all nations, baptizing them, in the name of the Father, and the Son, and the Holy Ghost." (Matt. 28:19) Mark 16:16 reads, "He that believeth, and is baptized, shall be saved…"</li>
+                    <li style="margin-bottom: 1rem;"><strong>We believe in the imminent return</strong>, second coming of our Lord Jesus Christ for His Church (His bride). We believe that there is a heaven and a hell. Heaven is a place of eternal rest for the righteous (those who have accepted Jesus Christ as atonement for their sins) and hell is a place of eternal damnation for the unrighteous (those who do not accept Jesus Christ as their Lord and Savior) (Matt. 28:19, Mark 16:16). We believe in the Great Commission – to minister God’s saving grace and to reach out to the poor and lost in spirit (Mark 16:15). And foremost, to honor and obey God’s command, "take the gospel into all the world."</li>
+                </ol>
 
-<p>in, and live by, God the Father Almighty, Maker of heaven and earth and in Jesus Christ, His Son, Our Lord, Who was conceived by the Holy Ghost Through the Word of God and born of the virgin, Mary.  He suffered under Pontius Pilate, was crucified dead and buried. He descended into Hell and He stripped Satan of his power.  Upon the third day He rose again and Ascended into Heaven Where He is seated at the right hand of God the Father Almighty.  We believe in the forgiveness of all sins, the resurrection of the body, the communion of the saints, and life everlasting.  We believe that through a daily profession of faith and trust in the shed blood of Jesus Christ, His death, burial, resurrection, and ascension; one may become a partaker of their inheritance in Him.</p>
+                <hr style="border: 0; height: 1px; background: var(--border-color); margin: 3rem 0;">
 
-<p>1.We believe that the Bible</p>
+                <h3 class="label-accent">Hand Up, Not Out</h3>
+                <p>Julie Larsen and her family ministry (SGM) has given their time and money to help people in need. As one thing is certain, life changes. The time is here to expand to reach more people for the Gospel and reach more people. Shepherds Gate Missions, Inc. was started in 1998 when she had a restaurant donating to people in need. In 2007, Larsen launched her own J. L. Divine Designs (Shepherd's Gate, this company also helps support S.G.M, its projects and programs). Below is a list of what Ms. Larsen and her family ministry has done with fellowship and the less fortunate over the years. To date we have proudly served many communities, families, and individuals and have generated over $200,000.00 in money besides material donations to help people.</p>
 
-<p>the inspired Word of God written by holy men as they were instructed by God.  It is the inerrant Word of God (2 Tim 3:15).</p>
-
-<p>2.We believe that Man was created good and upright, for God said, “Let us make man in Our own image, after Our likeness.”  But man, voluntarily transgressed against God, and God has provided man with his only hope of salvation and redemption which is in Jesus Christ, the Son of God (Gen. 1:26-31, 3:17, Rom. 5:12-21).</p>
-
-<p>3.We believe that Jesus came as a man, was born of a virgin, and His Father is God.</p>
-
-<p>4.We believe that Jesus was born without the inherited sin of Adam and, during his entire life, committed no sin.  Jesus was the eternal Father made visible, apart from whom there is no God (I Tim. 3:16, John 10:30, Is. 9:6, Luke 2:11, Rev. 1:8).</p>
-
-<p>5.We believe in the personal salvation of believers through the confession of sins, recognizing that Jesus Christ is the substitute for our sins, through His shed blood.  It is by the grace of God, through faith in Jesus Christ and His shed blood, that we become an heir of God (Rom. 10:9, 10, 1 John 1:9, Eph. 2:8,9).</p>
-
-<p>6.We believe that the New Birth is a direct witness of the Spirit and is an inward confession of Jesus Christ (Rom. 8:16).</p>
-
-<p>7.We believe that following salvation through Jesus Christ you should be baptized…as commanded by the Lord Jesus.  This was the last command He left His apostles.  “Go ye therefore, and teach all nations, baptizing them, in the name of the Father, and the Son, and the Holy Ghost.” (Matt. 28:19) Mark 16:16 reads, “ He that believeth, and is baptized, shall be saved…”</p>
-
-<p>8.We believe in the imminent return, second coming of our Lord Jesus Christ for His Church (His bride). We believe that there is a heaven and a hell.  Heaven is a place of eternal rest for the righteous (those who have accepted Jesus Christ as atonement for their sins) and hell is a place of eternal damnation for the unrighteous (those who do not accept Jesus Christ as their Lord and Savior) (Matt. 28:19, Mark 16:16).  We believe in the Great Commission – to minister God’s saving grace and to reach out to the poor and lost in spirit (Mark 16:15).  And foremost, to honor and obey God’s command, “take the gospel into all the world.”</p>
-
-<p>HAND UP, NOT OUT</p>
-
-<p>Julie Larsen and her family ministry (SGM) has given their time and money to help people in need. As one thing is certain, life changes. The time is here to expand to reach more people for the Gospel and reach more people. Shepherds Gate Missions, Inc. was started in 1998 when she had a restaurant donating to people in need. In 2007, Larsen launched her own J. L. Divine Designs (Shepherd's Gate, this company also helps support S.G.M, it’s projects and programs). Below is a list of what Ms. Larsen and her family ministry has done with fellowship and the less fortunate over the years. To date we have proudly served many communities, families, and individuals and have generated over $200,000.00 in money besides material donations to help people.</p>
-
-<p>CHRISTIAN COUNSELING; CRISIS COUNSELING</p>
-
-<p>2.  Visiting the elderly, fellowship, social high tea parties for shut ins, meals, & gifts</p>
-
-<p>3.  Visiting nursing homes for the elderly</p>
-
-<p>4.  Visiting the sick, gifts, prayer shawls, prayer robes, fellowship, widows and children</p>
-
-<p>5.  Donations to hospice, community shelters, food, gifts and clothing, and especially donations for clothing for foster care children</p>
-
-<p>6.  Reading material to help in crisis such as, depression, divorce, losing a loved one, or to spread the Gospel</p>
-
-<p>7.  Donation of gift baskets for benefits to help for causes such as, heart trouble, all forms of cancers, car accidents, food, shelter, medicines or traveling expenses for medical care</p>
-
-<p>8.  Donating time to help for child care, so families could work</p>
-
-<p>9.  Transportation: assisting people in need not being able to drive or handicapped to doctor or hospital appointments</p>
-
-<p>10.  Monies for special needs</p>
-
-<p>11. Equipment for wheel chairs for comfort and easy access to VA hospitals and nursing homes</p>
-
-<p>12. Organized other businesses to donate to people in crisis</p>
-
-
+                <!-- Converted paragraph numbers into a clean, semantic unordered list for scannability -->
+                <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-body); list-style-type: square;">
+                    <li style="margin-bottom: 0.5rem;">Christian Counseling & Crisis Counseling</li>
+                    <li style="margin-bottom: 0.5rem;">Visiting the elderly, fellowship, social high tea parties for shut ins, meals, & gifts</li>
+                    <li style="margin-bottom: 0.5rem;">Visiting nursing homes for the elderly</li>
+                    <li style="margin-bottom: 0.5rem;">Visiting the sick, gifts, prayer shawls, prayer robes, fellowship, widows and children</li>
+                    <li style="margin-bottom: 0.5rem;">Donations to hospice, community shelters, food, gifts and clothing, and especially donations for clothing for foster care children</li>
+                    <li style="margin-bottom: 0.5rem;">Reading material to help in crisis such as, depression, divorce, losing a loved one, or to spread the Gospel</li>
+                    <li style="margin-bottom: 0.5rem;">Donation of gift baskets for benefits to help for causes such as heart trouble, all forms of cancers, car accidents, food, shelter, medicines or traveling expenses for medical care</li>
+                    <li style="margin-bottom: 0.5rem;">Donating time to help for child care, so families could work</li>
+                    <li style="margin-bottom: 0.5rem;">Transportation: assisting people in need not being able to drive or handicapped to doctor or hospital appointments</li>
+                    <li style="margin-bottom: 0.5rem;">Monies for special needs</li>
+                    <li style="margin-bottom: 0.5rem;">Equipment for wheel chairs for comfort and easy access to VA hospitals and nursing homes</li>
+                    <li style="margin-bottom: 0.5rem;">Organized other businesses to donate to people in crisis</li>
+                </ul>
             </section>
         </main>
     </div>
-    <footer>
+    
+    <footer class="fade-in-up delay-4">
         <div class="container">
             <p class="blessing">Unto Him that loved us, and washed us from our sins in his own blood, And hath made us kings and priests unto GOD and his Father; to Him be the glory and dominion for ever and ever. Amen. May the LORD bless you and keep you as together we will help one another and get the Gospel around the world.</p>
             <p class="copyright"><strong>Copyright Notice:</strong> Thank you for your purchase! All resource material, including books and products from J.L.Divine Designs are under copyright of Shepherd's Gate Mission's, Inc. Products from J.L.Divine Designs are to support Shepherd's Gate Mission's, Inc. Illegal copying for sale in any form will be pursued.</p>
