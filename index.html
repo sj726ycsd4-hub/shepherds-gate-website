@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Shepherd's Gate Missions</title>
-    <!-- Premium typography for a design-studio look -->
+    <!-- Luxury Typography: Montserrat for clean UI, Cormorant Garamond for elegant editorial headers -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Spiritual Cross Banner with Overlay Header -->
+    <!-- Cinematic Hero Banner -->
     <div class="hero-banner">
         
-        <!-- Top Left Logo Header Bar (Overlaid on the banner) -->
-        <header class="top-header">
+        <!-- Frosted Glass Overlaid Header -->
+        <header class="top-header glass-header fade-in-down">
             <div class="container header-container">
                 <a href="index.html" class="header-logo">
-                    <!-- Custom Logo: Gate, Cross, and Shepherd's Crook -->
-                    <svg viewBox="0 0 100 100" width="40" height="40" aria-hidden="true">
-                        <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round"/>
-                        <path d="M10 90 H90" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
-                        <path d="M50 20 V80 M32 42 H68" stroke="#D69E2E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    <svg viewBox="0 0 100 100" width="45" height="45" aria-hidden="true" class="logo-icon">
+                        <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+                        <path d="M10 90 H90" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M50 20 V80 M32 42 H68" stroke="#D4AF37" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
                     </svg>
                     <h1>Shepherd's Gate Missions</h1>
                 </a>
             </div>
         </header>
 
-        <!-- Banner image served directly from your GitHub repository -->
+        <!-- Banner image with continuous zoom in/out animation -->
         <img class="hero-bg-img" src="cross-banner.jpg" alt="Christian Cross silhouette against a beautiful sky">
         <div class="hero-overlay"></div>
     </div>
@@ -40,10 +39,10 @@
     <div class="container layout-wrapper">
         
         <!-- Sidebar Navigation -->
-        <aside class="sidebar">
+        <aside class="sidebar fade-in-up delay-1">
             <nav aria-label="Main Navigation">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="missions.html">Shepherds Gate Missions</a></li>
                     <li><a href="president.html">About President of SGM</a></li>
                     <li><a href="accountability.html">Accountability</a></li>
@@ -58,20 +57,20 @@
         </aside>
         
         <main>
-            <section class="content-block">
+            <section class="content-block fade-in-up delay-2">
                 <h2>Home</h2>
                 <p>Shepherd's Gate Mission's, Inc. is a non-profit 501 (C) 3 Corporation ministering to the needs of people through SGM, it's projects, and programs. These projects and programs minister to children through adults and might include help with clothes, food, basic learning skills, and/or counseling to guide people to make better choices. All projects and programs are free of charge as SGM is a federal tax exempt public charity and gives a tax receipt for any monies or items donated. Anyone wanting to help people, please donate to Shepherd's Gate Mission's, Inc. and to email at contact@shepherdsgatemissions.com for the process until it is added to this site. SGM can give any material items to give to needy people and they can donate property, cars, and non-perishable food items; however, please contact SGM before you do this as certain items must be in usable condition.</p>
 
-                <!-- Clickable Featured Publication Section linking to Amazon -->
-                <a href="https://www.amazon.com/Community-Relational-Soul-Care-Restoring/dp/1664294902" target="_blank" rel="noopener noreferrer" class="book-feature-link">
+                <!-- Premium Clickable Featured Publication Card with 3D Hover -->
+                <a href="https://www.amazon.com/Community-Relational-Soul-Care-Restoring/dp/1664294902" target="_blank" rel="noopener noreferrer" class="book-feature-link fade-in-up delay-3">
                     <div class="book-image-wrapper">
                         <img src="https://m.media-amazon.com/images/I/813OBZT7QrL._SL1360_.jpg" alt="Community Relational Soul Care Book Cover">
                     </div>
                     <div class="book-details">
-                        <h3>Featured Publication</h3>
+                        <h3 class="label-accent">Featured Publication</h3>
                         <p class="book-title-sub">Community Relational Soul Care: Restoring God's People to Spiritual Vitality</p>
                         <p class="book-description">Written by Dr. Julie A. Larsen. Authored to support the ongoing mission, education, and holistic care principles of Shepherd's Gate Missions.</p>
-                        <span class="book-action-text">Click here to view & purchase on Amazon &rarr;</span>
+                        <span class="book-action-text">Click here to view & purchase on Amazon <span class="arrow">&rarr;</span></span>
                     </div>
                 </a>
 
@@ -84,7 +83,7 @@
         </main>
     </div>
     
-    <footer>
+    <footer class="fade-in-up delay-4">
         <div class="container">
             <p class="blessing">Unto Him that loved us, and washed us from our sins in his own blood, And hath made us kings and priests unto GOD and his Father; to Him be the glory and dominion for ever and ever. Amen. May the LORD bless you and keep you as together we will help one another and get the Gospel around the world.</p>
             <p class="copyright"><strong>Copyright Notice:</strong> Thank you for your purchase! All resource material, including books and products from J.L.Divine Designs are under copyright of Shepherd's Gate Mission's, Inc. Products from J.L.Divine Designs are to support Shepherd's Gate Mission's, Inc. Illegal copying for sale in any form will be pursued.</p>
