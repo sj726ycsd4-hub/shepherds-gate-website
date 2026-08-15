@@ -2,17 +2,17 @@
    CSS Variables & Base Reset
    ========================================================================== */
 :root {
-    --primary-color: #1A365D; /* Deep Navy - High Contrast */
+    --primary-color: #1A365D; /* Deep Navy */
     --secondary-color: #2B6CB0; /* Interactive Blue */
-    --accent-color: #D69E2E; /* Warm Gold for graphics & accents */
-    --text-dark: #1A202C; /* Accessible Dark Gray for headings */
-    --text-body: #4A5568; /* Accessible Medium Gray for paragraphs */
-    --bg-page: #F7FAFC; /* Soft off-white to reduce eye strain */
+    --accent-color: #D69E2E; /* Warm Gold */
+    --text-dark: #1A202C; /* Dark Gray */
+    --text-body: #4A5568; /* Medium Gray */
+    --bg-page: #F7FAFC; /* Soft off-white */
     --bg-card: #FFFFFF;
     --border-color: #E2E8F0;
     --radius-md: 8px;
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
 
@@ -28,6 +28,13 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.7;
     font-size: 16px;
+    /* Prevents horizontal scrolling on mobile */
+    overflow-x: hidden; 
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
 }
 
 h1, h2, h3 {
@@ -45,84 +52,110 @@ a {
 
 a:hover {
     color: var(--primary-color);
-    text-decoration: underline;
 }
 
 /* ==========================================================================
-   Header Styling (Logo & Christian Graphics)
+   Majestic Responsive Hero Banner
    ========================================================================== */
-.main-header {
+.hero-banner {
+    position: relative;
+    width: 100%;
+    /* Scales height based on screen size, min 250px, max 400px */
+    height: clamp(250px, 40vh, 400px); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 5px solid var(--accent-color);
     background-color: var(--primary-color);
-    color: var(--bg-card);
-    padding: 1.5rem 0;
-    box-shadow: var(--shadow-md);
-    border-bottom: 4px solid var(--accent-color);
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
     padding: 0 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    width: 100%;
 }
 
-.logo-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.logo-icon {
-    flex-shrink: 0;
-}
-
-.logo-text h1 {
-    color: var(--bg-card);
-    font-size: 1.75rem;
-    margin: 0;
-    letter-spacing: 0.5px;
-}
-
-.logo-text .tagline {
-    font-size: 0.9rem;
-    color: #A0AEC0;
-    font-weight: 500;
-    text-transform: uppercase;
+.hero-content h1 {
+    /* Fluid typography: shrinks on mobile, grows on desktop */
+    font-size: clamp(1.8rem, 5vw + 1rem, 3.5rem);
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
     letter-spacing: 1px;
 }
 
+.hero-content p {
+    /* Fluid typography */
+    font-size: clamp(0.85rem, 2vw + 0.5rem, 1.25rem);
+    color: #FBD38D;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
 /* ==========================================================================
-   Main Layout & Grid
+   Responsive Main Layout & Grid
    ========================================================================== */
 .layout-wrapper {
     max-width: 1200px;
     margin: 3rem auto;
     padding: 0 1.5rem;
     display: grid;
-    grid-template-columns: 280px 1fr;
+    /* Default desktop layout */
+    grid-template-columns: minmax(260px, 1fr) 3fr; 
     gap: 2.5rem;
     align-items: start;
 }
 
-@media (max-width: 768px) {
-    .layout-wrapper {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* ==========================================================================
-   Sidebar & Interactive Navigation
+   Sidebar & Navigation
    ========================================================================== */
 .sidebar {
     background-color: var(--bg-card);
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
     border: 1px solid var(--border-color);
     position: sticky;
     top: 2rem;
+}
+
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.nav-logo-svg {
+    width: clamp(70px, 10vw, 90px);
+    height: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.nav-brand h2 {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1.2;
 }
 
 .sidebar nav ul {
@@ -140,17 +173,16 @@ a:hover {
     color: var(--text-body);
     font-weight: 500;
     border-radius: 6px;
-    border-left: 3px solid transparent;
-    text-decoration: none;
+    border-left: 4px solid transparent;
+    background-color: transparent;
 }
 
-/* Modern Interactive Hover State */
 .sidebar nav ul li a:hover,
 .sidebar nav ul li a:focus {
     background-color: var(--bg-page);
     color: var(--primary-color);
-    border-left: 3px solid var(--accent-color);
-    transform: translateX(5px);
+    border-left: 4px solid var(--accent-color);
+    transform: translateX(6px);
 }
 
 /* ==========================================================================
@@ -158,33 +190,35 @@ a:hover {
    ========================================================================== */
 .content-block {
     background-color: var(--bg-card);
-    padding: 2.5rem;
+    padding: clamp(1.5rem, 4vw, 3rem); /* Less padding on mobile */
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
     border: 1px solid var(--border-color);
+    width: 100%;
 }
 
 .content-block h2 {
     color: var(--primary-color);
-    font-size: 2rem;
-    border-bottom: 2px solid var(--bg-page);
-    padding-bottom: 0.75rem;
-    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .content-block p {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 footer {
-    background-color: var(--text-dark);
+    background-color: var(--primary-color);
     color: #E2E8F0;
-    padding: 3rem 1.5rem;
-    margin-top: 4rem;
+    padding: 4rem 1.5rem;
+    margin-top: 5rem;
     text-align: center;
+    border-top: 4px solid var(--accent-color);
 }
 
 footer .container {
@@ -193,16 +227,67 @@ footer .container {
 }
 
 footer .blessing {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.15rem);
     font-style: italic;
     font-family: 'Georgia', serif;
     color: var(--accent-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
 }
 
 footer .copyright {
     font-size: 0.85rem;
     color: #A0AEC0;
-    border-top: 1px solid #4A5568;
+    border-top: 1px solid #2B6CB0;
     padding-top: 1.5rem;
+}
+
+/* ==========================================================================
+   Media Queries (Responsive Breakpoints)
+   ========================================================================== */
+
+/* Tablet (Landscape) & Smaller Laptops */
+@media (max-width: 992px) {
+    .layout-wrapper {
+        grid-template-columns: 240px 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Tablet (Portrait) & Large Mobile */
+@media (max-width: 768px) {
+    .layout-wrapper {
+        grid-template-columns: 1fr; /* Stacks the sidebar on top of the content */
+        margin: 1.5rem auto;
+    }
+    
+    .sidebar {
+        position: relative; /* Disables sticky positioning so it scrolls away normally on mobile */
+        top: 0;
+        margin-bottom: 1rem;
+    }
+
+    /* On mobile, display the navigation links in two columns to save vertical space */
+    .sidebar nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    .sidebar nav ul li {
+        margin-bottom: 0;
+    }
+    
+    .sidebar nav ul li a {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    /* Stack navigation back to a single column for very small screens */
+    .sidebar nav ul {
+        grid-template-columns: 1fr;
+    }
 }
