@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Shepherd's Gate Missions</title>
+    <!-- Added premium typography for a design-studio look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Top Left Logo Header Bar -->
     <header class="top-header">
-        <a href="index.html" class="header-logo">
-            <!-- Custom Logo: Gate, Cross, and Shepherd's Crook -->
-            <svg viewBox="0 0 100 100" width="40" height="40" aria-hidden="true">
-                <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="#1A365D" stroke-width="6" fill="none" stroke-linecap="round"/>
-                <path d="M10 90 H90" stroke="#1A365D" stroke-width="6" stroke-linecap="round"/>
-                <path d="M50 20 V80 M32 42 H68" stroke="#D69E2E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="#1A365D" stroke-width="5" fill="none" stroke-linecap="round"/>
-            </svg>
-            <h1>Shepherd's Gate Missions</h1>
-        </a>
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                <!-- Custom Logo: Gate, Cross, and Shepherd's Crook -->
+                <svg viewBox="0 0 100 100" width="40" height="40" aria-hidden="true">
+                    <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="#1A365D" stroke-width="6" fill="none" stroke-linecap="round"/>
+                    <path d="M10 90 H90" stroke="#1A365D" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M50 20 V80 M32 42 H68" stroke="#D69E2E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="#1A365D" stroke-width="5" fill="none" stroke-linecap="round"/>
+                </svg>
+                <h1>Shepherd's Gate Missions</h1>
+            </a>
+        </div>
     </header>
 
-    <!-- Web-Hosted Hero Banner Image -->
+    <!-- Jesus as a Shepherd Banner (No Text) -->
     <div class="hero-banner">
-        <img class="hero-bg-img" src="http://googleusercontent.com/image_collection/image_retrieval/10873913495827312515_0" alt="Jesus the Good Shepherd with sheep in a beautiful landscape">
+        <!-- Using a live, publicly hosted Unsplash image of a beautiful shepherd/sheep landscape -->
+        <img class="hero-bg-img" src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?q=80&w=2000&auto=format&fit=crop" alt="Beautiful landscape with sheep grazing at sunset">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Shepherd's Gate Missions</h1>
-        </div>
     </div>
 
     <!-- Main Layout Wrapper -->
@@ -65,7 +69,7 @@
                     <div class="book-details">
                         <h3>Featured Publication</h3>
                         <p class="book-title-sub">Community Relational Soul Care: Restoring God's People to Spiritual Vitality</p>
-                        <p style="font-size: 0.95rem; margin-bottom: 0.5rem; color: #4A5568;">Written by Dr. Julie A. Larsen. Authored to support the ongoing mission, education, and holistic care principles of Shepherd's Gate Missions.</p>
+                        <p class="book-description">Written by Dr. Julie A. Larsen. Authored to support the ongoing mission, education, and holistic care principles of Shepherd's Gate Missions.</p>
                         <span class="book-action-text">Click here to view & purchase on Amazon &rarr;</span>
                     </div>
                 </a>
@@ -76,9 +80,11 @@
 
                 <p>Shepherd's Gate Mission's was founded for the purpose of helping people achieve a holistic life. We help people develop into servants and worshipers of GOD to have "an abundant life" that humans were created to enjoy.</p>
 
-                <p>Copyright Notice: Thank you for your purchase! All resource material, including books and products from J.L.Divine Designs are under copyright of Shepherd's Gate Mission's, Inc. Products from J.L.Divine Designs are to support Shepherd's Gate Mission's, Inc. Illegal copying for sale in any form will be pursued.</p>
+                <p class="legal-text">Copyright Notice: Thank you for your purchase! All resource material, including books and products from J.L.Divine Designs are under copyright of Shepherd's Gate Mission's, Inc. Products from J.L.Divine Designs are to support Shepherd's Gate Mission's, Inc. Illegal copying for sale in any form will be pursued.</p>
 
-                <p>Unto Him that loved us, and washed us from our sins in his own blood, And hath made us kings and priests unto GOD and his Father; to Him be the glory and dominion for ever and ever. Amen. May the LORD bless you and keep you as together we will help one another and get the Gospel around the world.</p>
+                <blockquote class="scripture-quote">
+                    "Unto Him that loved us, and washed us from our sins in his own blood, And hath made us kings and priests unto GOD and his Father; to Him be the glory and dominion for ever and ever. Amen. May the LORD bless you and keep you as together we will help one another and get the Gospel around the world."
+                </blockquote>
             </section>
         </main>
     </div>
