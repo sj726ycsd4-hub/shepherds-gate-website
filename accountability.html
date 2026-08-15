@@ -4,21 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accountability | Shepherd's Gate Missions</title>
+    <!-- Luxury Typography: Montserrat for clean UI, Cormorant Garamond for elegant editorial headers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="mobile-header">
-        <h1>Shepherd's Gate Missions</h1>
-    </header>
+
+    <!-- Cinematic Hero Banner -->
+    <div class="hero-banner">
+        
+        <!-- Frosted Glass Overlaid Header -->
+        <header class="top-header glass-header fade-in-down">
+            <div class="container header-container">
+                <a href="index.html" class="header-logo">
+                    <svg viewBox="0 0 100 100" width="45" height="45" aria-hidden="true" class="logo-icon">
+                        <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+                        <path d="M10 90 H90" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M50 20 V80 M32 42 H68" stroke="#D4AF37" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    <h1>Shepherd's Gate Missions</h1>
+                </a>
+            </div>
+        </header>
+
+        <!-- Banner image with continuous zoom in/out animation -->
+        <img class="hero-bg-img" src="cross-banner.jpg" alt="Christian Cross silhouette against a beautiful sky">
+        <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Main Layout Wrapper -->
     <div class="container layout-wrapper">
-        <aside class="sidebar">
-            <h1 class="desktop-title">Shepherd's Gate Missions</h1>
-            <nav>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar fade-in-up delay-1">
+            <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="missions.html">Shepherds Gate Missions</a></li>
                     <li><a href="president.html">About President of SGM</a></li>
-                    <li><a href="accountability.html">Accountability</a></li>
+                    <li><a href="accountability.html" class="active">Accountability</a></li>
                     <li><a href="devotions.html">Closerwalk Devotions</a></li>
                     <li><a href="bible-study.html">Bible Study</a></li>
                     <li><a href="counseling.html">Christian Counseling</a></li>
@@ -29,40 +56,58 @@
                 </ul>
             </nav>
         </aside>
+        
         <main>
-            <section class="content-block">
+            <section class="content-block fade-in-up delay-2">
                 <h2>Accountability</h2>
-<p>RESOLUTION OF ACCOUNTABILITY</p>
+                
+                <h3 class="label-accent" style="margin-top: 1rem;">Resolution of Accountability</h3>
 
-<p>WHERE AS it is the desire of the President of Shepherd's Gate Mission's, Inc and the Board of Directors to ensure that it maintains the highest levels of credibility, integrity, and accountability.</p>
+                <!-- Premium Legal Formatting Block -->
+                <div style="background: var(--bg-page); padding: 2.5rem; border-radius: var(--radius-md); border-left: 4px solid var(--accent-color); margin: 2rem 0; box-shadow: var(--shadow-soft);">
+                    <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-style: italic; color: var(--primary-color); margin-bottom: 1.5rem;">
+                        <strong style="font-style: normal; color: var(--accent-color); font-family: 'Montserrat', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; margin-right: 0.5rem;">Whereas</strong> 
+                        it is the desire of the President of Shepherd's Gate Mission's, Inc and the Board of Directors to ensure that it maintains the highest levels of credibility, integrity, and accountability.
+                    </p>
 
-<p>BE IT RESOLVED that the Board of Directors approves the following resolution to be approved and to be followed by the President, Ministry Directors, Staff and all others who would be in the future become connected to Shepherd's Gate Mission's, Inc.</p>
+                    <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-style: italic; color: var(--primary-color); margin-bottom: 0;">
+                        <strong style="font-style: normal; color: var(--accent-color); font-family: 'Montserrat', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; margin-right: 0.5rem;">Be It Resolved</strong> 
+                        that the Board of Directors approves the following resolution to be approved and to be followed by the President, Ministry Directors, Staff and all others who would be in the future become connected to Shepherd's Gate Mission's, Inc.
+                    </p>
+                </div>
 
-<p>STATEMENT OF POLICY: Because Shepherd's Gate Mission's, Inc</p>
+                <hr style="border: 0; height: 1px; background: var(--border-color); margin: 3rem 0;">
 
-<p>operates on the basis of donations, special contributions, gifts, funding from general public, and profits from J.L.Designs, the organization has set high standards of receiving and distributing the finances intended for Shepherd's Gate Mission's, Inc.</p>
+                <h3 class="label-accent">Statement of Policy</h3>
+                <p>Because <strong>Shepherd's Gate Mission's, Inc</strong> operates on the basis of donations, special contributions, gifts, funding from general public, and profits from J.L.Designs, the organization has set high standards of receiving and distributing the finances intended for Shepherd's Gate Mission's, Inc.</p>
 
-<p>1. Shepherd's Gate Mission's, Inc uses all contributions, gifts, and donations designated for Shepherd's Gate Mission's to support the Shepherds Gate Missions Ministry, and all of its projects and programs caring for the needy.</p>
+                <!-- Converted paragraph numbers into a clean, semantic ordered list -->
+                <ol style="margin-left: 1.5rem; margin-top: 2rem; margin-bottom: 2.5rem; color: var(--text-body);">
+                    <li style="margin-bottom: 1.25rem;"><strong>Shepherd's Gate Mission's, Inc</strong> uses all contributions, gifts, and donations designated for Shepherd's Gate Mission's to support the Shepherds Gate Missions Ministry, and all of its projects and programs caring for the needy.</li>
+                    <li style="margin-bottom: 1.25rem;"><strong>Shepherd's Gate Mission's, Inc</strong> guards against engaging in any form of activity that compromises our Christian ethics as it relates to finances.</li>
+                    <li style="margin-bottom: 1.25rem;"><strong>Shepherd's Gate Mission's, Inc</strong> keeps accurate books and records of all contributions, donations and gifts and offers tax receipts to those who request them after the end of each year.</li>
+                    <li style="margin-bottom: 1.25rem;"><strong>Shepherd's Gate Mission's, Inc</strong> does not and will not sell names of those on our e-mail or mailing lists to any other organization.</li>
+                </ol>
 
-<p>2. Shepherd's Gate Mission's, Inc guards against engaging in any form of activity that compromises our Christian ethics as it relates to finances.</p>
+                <p style="font-size: 0.95rem; color: #6B7280; font-style: italic; margin-top: 2rem;">
+                    This Resolution of Accountability has been adopted by the Board of Directors for Shepherd's Gate Mission's, Inc on this 2nd day of January 2008.
+                </p>
 
-<p>3. Shepherd's Gate Mission's, Inc keeps accurate books and records of all contributions, donations and gifts and offers tax receipts to those who request them after the end of each year.</p>
+                <p style="margin-top: 3.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary-color); font-weight: 700; line-height: 1.3;">
+                    President and CEO of Shepherd's Gate Mission's, Inc.<br>
+                    <span style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 500; color: var(--text-body); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-top: 0.5rem;">Dr. Julie Larsen</span>
+                </p>
 
-<p>4. Shepherd's Gate Mission's, Inc does not and will not sell names of those on our e-mail or mailing lists to any other organization.</p>
+                <hr style="border: 0; height: 1px; background: var(--border-color); margin: 3rem 0;">
 
-<p>This Resolution of Accountability has been adopted by the Board of Directors for Shepherd's Gate Mission's, Inc on this 2nd day of January 2008.</p>
-
-<p>President and CEO of Shepherd's Gate Mission's, Inc.</p>
-
-<p>Dr. Julie Larsen</p>
-
-<p>FINANCIAL STATEMENT</p>
-
+                <h3 class="label-accent">Financial Statement</h3>
+                <p style="color: #6B7280; font-style: italic;">(Financial statements and documentation to be provided here).</p>
 
             </section>
         </main>
     </div>
-    <footer>
+    
+    <footer class="fade-in-up delay-4">
         <div class="container">
             <p class="blessing">Unto Him that loved us, and washed us from our sins in his own blood, And hath made us kings and priests unto GOD and his Father; to Him be the glory and dominion for ever and ever. Amen. May the LORD bless you and keep you as together we will help one another and get the Gospel around the world.</p>
             <p class="copyright"><strong>Copyright Notice:</strong> Thank you for your purchase! All resource material, including books and products from J.L.Divine Designs are under copyright of Shepherd's Gate Mission's, Inc. Products from J.L.Divine Designs are to support Shepherd's Gate Mission's, Inc. Illegal copying for sale in any form will be pursued.</p>
