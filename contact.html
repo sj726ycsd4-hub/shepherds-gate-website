@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact / Donations | Shepherd's Gate Missions</title>
+    <!-- Luxury Typography: Montserrat for clean UI, Cormorant Garamond for elegant editorial headers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="mobile-header">
-        <h1>Shepherd's Gate Missions</h1>
-    </header>
+
+    <!-- Cinematic Hero Banner -->
+    <div class="hero-banner">
+        
+        <!-- Frosted Glass Overlaid Header -->
+        <header class="top-header glass-header fade-in-down">
+            <div class="container header-container">
+                <a href="index.html" class="header-logo">
+                    <svg viewBox="0 0 100 100" width="45" height="45" aria-hidden="true" class="logo-icon">
+                        <path d="M20 90 V40 A30 30 0 0 1 80 40 V90" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+                        <path d="M10 90 H90" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M50 20 V80 M32 42 H68" stroke="#D4AF37" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M62 80 V45 A10 10 0 0 0 42 45" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    <h1>Shepherd's Gate Missions</h1>
+                </a>
+            </div>
+        </header>
+
+        <!-- Banner image with continuous zoom in/out animation -->
+        <img class="hero-bg-img" src="cross-banner.jpg" alt="Christian Cross silhouette against a beautiful sky">
+        <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Main Layout Wrapper -->
     <div class="container layout-wrapper">
-        <aside class="sidebar">
-            <h1 class="desktop-title">Shepherd's Gate Missions</h1>
-            <nav>
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar fade-in-up delay-1">
+            <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="missions.html">Shepherds Gate Missions</a></li>
@@ -24,27 +51,70 @@
                     <li><a href="counseling.html">Christian Counseling</a></li>
                     <li><a href="prayer.html">Prayer</a></li>
                     <li><a href="school.html">Online School</a></li>
-                    <li><a href="contact.html">Contact / Donations</a></li>
+                    <li><a href="contact.html" class="active">Contact / Donations</a></li>
                     <li><a href="estore.html">eStore</a></li>
                 </ul>
             </nav>
         </aside>
+        
         <main>
-            <section class="content-block">
-                <h2>Contact / Donations</h2>
-<p>Contact</p>
+            <section class="content-block fade-in-up delay-2">
+                <h2>Contact & Donations</h2>
+                
+                <p style="font-size: 1.1rem; color: #6B7280; font-style: italic; margin-bottom: 2.5rem;">Partner with Shepherd's Gate Missions to bring spiritual vitality, crisis support, and community care to people in need.</p>
 
-<p>President: Julie Larsen</p>
+                <!-- Contact & Leadership Cards Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; margin-bottom: 3.5rem;">
+                    
+                    <!-- Leadership Card -->
+                    <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); border-top: 4px solid var(--accent-color);">
+                        <h3 class="label-accent" style="margin-bottom: 0.5rem;">Ministry Leadership</h3>
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary-color); margin-bottom: 0.5rem;">Dr. Julie Larsen</h4>
+                        <p style="font-size: 0.9rem; color: #6B7280; margin-bottom: 1.25rem;">President & CEO, Shepherd's Gate Missions, Inc.</p>
+                        <p style="font-size: 0.9rem; margin: 0;">Guiding holistic soul care, free Christian counseling programs, and community outreach efforts nationwide.</p>
+                    </div>
 
-<p>Email Address: contact@shepherdsgatemissions.com</p>
+                    <!-- Direct Inquiry Card -->
+                    <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); border-top: 4px solid var(--secondary-color);">
+                        <h3 class="label-accent" style="margin-bottom: 0.5rem;">Direct Email Communication</h3>
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary-color); margin-bottom: 0.5rem;">Reach Out Directly</h4>
+                        <p style="font-size: 0.9rem; color: #6B7280; margin-bottom: 1.25rem;">For counseling requests, general inquiries, or donation guidance:</p>
+                        <a href="mailto:contact@shepherdsgatemissions.com" style="display: inline-block; background: var(--secondary-color); color: #FFFFFF; padding: 0.75rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: var(--transition-fast);">
+                            contact@shepherdsgatemissions.com &rarr;
+                        </a>
+                    </div>
 
-<p>Thank you for your donations, working together makes a better world.</p>
+                </div>
 
+                <hr style="border: 0; height: 1px; background: var(--border-color); margin: 3rem 0;">
+
+                <!-- Financial & Material Donation Block -->
+                <h3 class="label-accent" style="font-size: 1.1rem; margin-bottom: 1.5rem;">Supporting Our Mission</h3>
+
+                <div style="background: var(--bg-page); padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); margin-bottom: 3rem;">
+                    <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1rem;">501(c)(3) Tax-Exempt Public Charity</h4>
+                    
+                    <p style="margin-bottom: 1.25rem;">Shepherd's Gate Missions, Inc. is a federal tax-exempt public charity. All contributions, gifts, and donations are used directly to support SGM projects, programs, and community assistance initiatives caring for individuals and families in need.</p>
+
+                    <p style="margin-bottom: 1.5rem;">Tax receipts are issued for all monetary donations and accepted material gifts. Material donations may include property, vehicles, clothing, and non-perishable food items.</p>
+
+                    <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 1.5rem; border-radius: var(--radius-md); border-left: 4px solid var(--accent-color);">
+                        <strong style="color: var(--primary-color); font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Important Note on Material Gifts:</strong>
+                        <p style="font-size: 0.9rem; color: #6B7280; margin: 0;">Please contact SGM via email prior to arranging delivery or property transfers, as donated items must be verified for usable condition.</p>
+                    </div>
+                </div>
+
+                <!-- Thank You Callout Banner -->
+                <div style="background: var(--primary-color); color: #FFFFFF; padding: 3rem; border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow-soft);">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--accent-color); margin-bottom: 1rem;">Working Together Makes a Better World</h3>
+                    <p style="font-size: 1.1rem; font-style: italic; font-family: 'Cormorant Garamond', serif; color: #F3F4F6; max-width: 650px; margin: 0 auto;">"Thank you for your prayers, generosity, and support as together we help one another and share the Gospel across the world."</p>
+                </div>
 
             </section>
         </main>
     </div>
-    <footer>
+    
+    <footer class="fade-in-up delay-4">
         <div class="container">
             <p class="blessing">Unto Him that loved us, and washed us from our sins in his own blood, And hath made us kings and priests unto GOD and his Father; to Him be the glory and dominion for ever and ever. Amen. May the LORD bless you and keep you as together we will help one another and get the Gospel around the world.</p>
             <p class="copyright"><strong>Copyright Notice:</strong> Thank you for your purchase! All resource material, including books and products from J.L.Divine Designs are under copyright of Shepherd's Gate Mission's, Inc. Products from J.L.Divine Designs are to support Shepherd's Gate Mission's, Inc. Illegal copying for sale in any form will be pursued.</p>
