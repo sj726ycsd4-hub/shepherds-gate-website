@@ -1,24 +1,19 @@
 /* ==========================================================================
-   Premium Fonts & Variables
+   CSS Variables & Base Reset (Warmer Ministry Styling)
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
-
 :root {
-    /* High-End Color Palette */
-    --primary: #0F172A; /* Deep, rich slate */
-    --gold: #C5A059; /* Muted, elegant gold */
-    --gold-light: #E2C78E;
-    --text-main: #334155;
-    --text-muted: #64748B;
-    --bg-body: #F8FAFC;
+    --primary-color: #1A365D; /* Deep Navy */
+    --secondary-color: #2B6CB0; /* Interactive Blue */
+    --accent-color: #D69E2E; /* Warm Gold */
+    --text-dark: #1A202C; /* Dark Gray */
+    --text-body: #4A5568; /* Medium Gray */
+    --bg-page: #F7FAFC; /* Soft off-white */
     --bg-card: #FFFFFF;
-    --border: #F1F5F9;
-    
-    /* Luxury Shadows & Radii */
-    --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
-    --radius: 12px;
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --border-color: #E2E8F0;
+    --radius-md: 8px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
 }
 
 * {
@@ -28,13 +23,12 @@
 }
 
 body {
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.8;
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
     font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
 img, svg {
@@ -42,52 +36,52 @@ img, svg {
     height: auto;
 }
 
-h1, h2, h3, h4 {
-    color: var(--primary);
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
+h1, h2, h3 {
+    color: var(--text-dark);
+    font-family: 'Georgia', serif;
+    margin-bottom: 1rem;
     line-height: 1.3;
-    margin-bottom: 1.25rem;
 }
 
 a {
-    color: var(--primary);
+    color: var(--secondary-color);
     text-decoration: none;
     transition: var(--transition);
 }
 
+a:hover {
+    color: var(--primary-color);
+}
+
 /* ==========================================================================
-   Top Brand Header
+   Top Left Logo Header
    ========================================================================== */
-.main-header {
+.top-header {
     background-color: var(--bg-card);
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--shadow-sm);
     display: flex;
     align-items: center;
+    border-bottom: 3px solid var(--accent-color);
+    position: relative;
+    z-index: 10;
 }
 
-.logo-wrapper {
+.header-logo {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
+    text-decoration: none;
 }
 
-.logo-icon {
-    flex-shrink: 0;
-}
-
-.logo-text h1 {
-    color: var(--primary);
-    font-size: 1.5rem;
+.header-logo h1 {
+    color: var(--primary-color);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
     margin: 0;
-    letter-spacing: 0.5px;
+}
+
+.header-logo:hover h1 {
+    color: var(--secondary-color);
 }
 
 /* ==========================================================================
@@ -96,7 +90,7 @@ a {
 .hero-banner {
     position: relative;
     width: 100%;
-    height: clamp(300px, 45vh, 500px);
+    height: clamp(250px, 40vh, 400px); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,17 +98,16 @@ a {
     background-image: url('https://images.unsplash.com/photo-1548625361-ec84ba03e06d?q=80&w=2000&auto=format&fit=crop');
     background-size: cover;
     background-position: center 40%;
-    background-attachment: fixed; /* Parallax effect for premium feel */
+    border-bottom: 5px solid var(--primary-color);
 }
 
-/* Elegant dark gradient overlay to make text pop */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.7));
+    background: linear-gradient(to bottom, rgba(26, 54, 93, 0.3), rgba(26, 54, 93, 0.7));
     z-index: 1;
 }
 
@@ -122,39 +115,40 @@ a {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 0 2rem;
-    max-width: 800px;
+    padding: 0 1.5rem;
+    width: 100%;
 }
 
 .hero-content h1 {
-    font-size: clamp(2rem, 5vw + 1rem, 4rem);
+    font-size: clamp(2rem, 5vw + 1rem, 3.8rem);
     color: #FFFFFF;
     margin-bottom: 0;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
     letter-spacing: 1px;
 }
 
 /* ==========================================================================
-   Main Layout & Grid
+   Responsive Main Layout & Grid
    ========================================================================== */
 .layout-wrapper {
     max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 2rem;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 3rem;
+    grid-template-columns: minmax(260px, 1fr) 3fr; 
+    gap: 2.5rem;
     align-items: start;
 }
 
 /* ==========================================================================
-   Premium Sidebar Navigation
+   Sidebar Navigation
    ========================================================================== */
 .sidebar {
     background-color: var(--bg-card);
-    padding: 2.5rem 2rem;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-soft);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
     position: sticky;
     top: 2rem;
 }
@@ -164,74 +158,62 @@ a {
 }
 
 .sidebar nav ul li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .sidebar nav ul li a {
     display: flex;
     align-items: center;
     padding: 0.85rem 1rem;
-    color: var(--text-main);
+    color: var(--text-body);
     font-weight: 500;
-    font-size: 0.95rem;
-    border-radius: 8px;
+    border-radius: 6px;
+    border-left: 4px solid transparent;
     background-color: transparent;
-    border-left: 2px solid transparent;
 }
 
 .sidebar nav ul li a:hover,
 .sidebar nav ul li a:focus {
-    color: var(--gold);
-    background-color: #FAFAFA;
-    border-left: 2px solid var(--gold);
-    transform: translateX(4px);
+    background-color: var(--bg-page);
+    color: var(--primary-color);
+    border-left: 4px solid var(--accent-color);
+    transform: translateX(6px);
 }
 
 /* ==========================================================================
-   Editorial Content Block
+   Main Content Block (Cards)
    ========================================================================== */
 .content-block {
     background-color: var(--bg-card);
-    padding: clamp(2rem, 5vw, 4rem);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-soft);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    width: 100%;
 }
 
 .content-block h2 {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    color: var(--primary);
-    margin-bottom: 2rem;
-    position: relative;
+    color: var(--primary-color);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    border-bottom: 2px solid var(--border-color);
     padding-bottom: 1rem;
-}
-
-.content-block h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background-color: var(--gold);
-    border-radius: 2px;
+    margin-bottom: 2rem;
 }
 
 .content-block p {
     margin-bottom: 1.5rem;
-    color: var(--text-main);
-    font-weight: 300;
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 footer {
-    background-color: var(--primary);
-    color: #F8FAFC;
-    padding: 5rem 2rem;
-    margin-top: 6rem;
+    background-color: var(--primary-color);
+    color: #E2E8F0;
+    padding: 4rem 1.5rem;
+    margin-top: 5rem;
     text-align: center;
-    border-top: 4px solid var(--gold);
+    border-top: 4px solid var(--accent-color);
 }
 
 footer .container {
@@ -240,42 +222,40 @@ footer .container {
 }
 
 footer .blessing {
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 2vw, 1.15rem);
     font-style: italic;
-    font-family: 'Playfair Display', serif;
-    color: var(--gold-light);
-    margin-bottom: 2.5rem;
+    font-family: 'Georgia', serif;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
     line-height: 1.8;
 }
 
 footer .copyright {
     font-size: 0.85rem;
-    color: var(--text-muted);
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 2rem;
-    font-family: 'Inter', sans-serif;
+    color: #A0AEC0;
+    border-top: 1px solid #2B6CB0;
+    padding-top: 1.5rem;
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   Media Queries (Responsive Breakpoints)
    ========================================================================== */
 @media (max-width: 992px) {
     .layout-wrapper {
         grid-template-columns: 240px 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
     .layout-wrapper {
-        grid-template-columns: 1fr;
-        margin: 2rem auto;
+        grid-template-columns: 1fr; 
+        margin: 1.5rem auto;
     }
     
     .sidebar {
-        position: relative;
+        position: relative; 
         top: 0;
-        padding: 1.5rem;
         margin-bottom: 1rem;
     }
 
@@ -284,9 +264,14 @@ footer .copyright {
         grid-template-columns: 1fr 1fr;
         gap: 0.5rem;
     }
+
+    .sidebar nav ul li {
+        margin-bottom: 0;
+    }
     
-    .hero-banner {
-        background-attachment: scroll; /* Disables parallax on mobile for performance */
+    .sidebar nav ul li a {
+        padding: 0.6rem;
+        font-size: 0.9rem;
     }
 }
 
