@@ -1,19 +1,19 @@
 /* ==========================================================================
-   CSS Variables & Base Reset
+   CSS Variables & Base Reset (Studio Refinement)
    ========================================================================== */
 :root {
     --primary-color: #1A365D; 
     --secondary-color: #2B6CB0; 
     --accent-color: #D69E2E; 
-    --text-dark: #1A202C; 
-    --text-body: #4A5568; 
-    --bg-page: #F7FAFC; 
+    --text-dark: #1E293B; /* Softer, richer dark for headings */
+    --text-body: #475569; /* Elegant slate gray for high legibility */
+    --bg-page: #F8FAFC; 
     --bg-card: #FFFFFF;
     --border-color: #E2E8F0;
-    --radius-md: 8px;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+    --radius-md: 12px; /* Smoother, modern corners */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -25,10 +25,13 @@
 body {
     background-color: var(--bg-page);
     color: var(--text-body);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.7;
-    font-size: 16px;
+    /* High-end modern sans-serif for body copy */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.85;
+    font-size: 1.05rem;
+    font-weight: 300;
     overflow-x: hidden; 
+    -webkit-font-smoothing: antialiased;
 }
 
 img, svg {
@@ -36,11 +39,14 @@ img, svg {
     height: auto;
 }
 
+/* Classic, elegant serif for headings */
 h1, h2, h3 {
     color: var(--text-dark);
-    font-family: 'Georgia', serif;
-    margin-bottom: 1rem;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
     line-height: 1.3;
+    letter-spacing: -0.01em;
 }
 
 a {
@@ -53,50 +59,54 @@ a:hover {
     color: var(--primary-color);
 }
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* ==========================================================================
    Top Left Logo Header
    ========================================================================== */
 .top-header {
     background-color: var(--bg-card);
-    padding: 1rem 1.5rem;
+    padding: 1.25rem 1.5rem;
     box-shadow: var(--shadow-sm);
-    display: flex;
-    align-items: center;
     border-bottom: 3px solid var(--accent-color);
     position: relative;
     z-index: 10;
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
 .header-logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
     text-decoration: none;
 }
 
 .header-logo h1 {
     color: var(--primary-color);
-    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin: 0;
-}
-
-.header-logo:hover h1 {
-    color: var(--secondary-color);
+    font-weight: 600;
 }
 
 /* ==========================================================================
-   Interactive Hero Banner Spanning the Entire Top Above Navigation
+   Interactive Hero Banner (Image Only)
    ========================================================================== */
 .hero-banner {
     position: relative;
     width: 100%;
-    height: clamp(280px, 45vh, 450px); 
+    height: clamp(300px, 50vh, 550px); 
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-bottom: 5px solid var(--primary-color);
-    /* Retained as a fallback color just in case the internet connection is slow */
     background-color: var(--primary-color);
 }
 
@@ -107,13 +117,13 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%; /* Focuses beautifully on the subject matter */
+    object-position: center 30%; 
     z-index: 1;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .hero-banner:hover .hero-bg-img {
-    transform: scale(1.05);
+    transform: scale(1.03); /* Slower, subtler zoom for a premium feel */
 }
 
 .hero-overlay {
@@ -122,37 +132,20 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Neutral gradient ensures the text stands out over the image without clashing */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.75));
+    /* Much lighter overlay since there is no text to read over it */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.2));
     z-index: 2;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    padding: 0 1.5rem;
-    width: 100%;
-}
-
-.hero-content h1 {
-    font-size: clamp(2rem, 5vw + 1rem, 4rem);
-    color: #FFFFFF;
-    margin-bottom: 0;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
-    letter-spacing: 1px;
 }
 
 /* ==========================================================================
    Responsive Main Layout & Grid
    ========================================================================== */
 .layout-wrapper {
-    max-width: 1200px;
-    margin: 3rem auto;
+    margin: 4rem auto;
     padding: 0 1.5rem;
     display: grid;
-    grid-template-columns: minmax(260px, 1fr) 3fr; 
-    gap: 2.5rem;
+    grid-template-columns: 280px 1fr; 
+    gap: 3.5rem;
     align-items: start;
 }
 
@@ -160,11 +153,7 @@ a:hover {
    Sidebar Navigation
    ========================================================================== */
 .sidebar {
-    background-color: var(--bg-card);
-    padding: 1.5rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
+    background-color: transparent; /* Cleaner look without the box */
     position: sticky;
     top: 2rem;
 }
@@ -174,62 +163,83 @@ a:hover {
 }
 
 .sidebar nav ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .sidebar nav ul li a {
-    display: flex;
-    align-items: center;
+    display: block;
     padding: 0.85rem 1rem;
     color: var(--text-body);
     font-weight: 500;
+    font-size: 0.95rem;
     border-radius: 6px;
-    border-left: 4px solid transparent;
     background-color: transparent;
+    border-left: 2px solid transparent;
 }
 
 .sidebar nav ul li a:hover,
 .sidebar nav ul li a:focus {
-    background-color: var(--bg-page);
     color: var(--primary-color);
-    border-left: 4px solid var(--accent-color);
-    transform: translateX(6px);
+    background-color: rgba(26, 54, 93, 0.03);
+    border-left: 2px solid var(--accent-color);
+    transform: translateX(4px);
 }
 
 /* ==========================================================================
-   Main Content Block & Clickable Featured Publication Card
+   Main Content Block & Typography Refinements
    ========================================================================== */
 .content-block {
     background-color: var(--bg-card);
-    padding: clamp(1.5rem, 4vw, 3rem);
+    padding: clamp(2rem, 5vw, 4rem);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-color);
     width: 100%;
 }
 
 .content-block h2 {
     color: var(--primary-color);
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.25rem;
+    margin-bottom: 2.5rem;
 }
 
 .content-block p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
 }
 
-/* Clickable Book Card Styles */
+.legal-text {
+    font-size: 0.85rem;
+    color: #64748B;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.scripture-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1.5rem;
+    margin: 2.5rem 0;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Clickable Featured Publication Card (Studio Style)
+   ========================================================================== */
 .book-feature-link {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     align-items: center;
-    background: #F8FAFC;
-    padding: 2rem;
+    background: var(--bg-card);
+    padding: 2.5rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
-    margin: 2rem 0;
+    margin: 3rem 0;
     flex-wrap: wrap;
     box-shadow: var(--shadow-sm);
     text-decoration: none;
@@ -239,21 +249,20 @@ a:hover {
 
 .book-feature-link:hover {
     box-shadow: var(--shadow-md);
-    transform: translateY(-3px);
-    border-color: var(--secondary-color);
-    background: #FFFFFF;
+    transform: translateY(-4px);
+    border-color: #CBD5E1;
 }
 
 .book-image-wrapper {
-    flex: 0 0 160px;
+    flex: 0 0 140px;
     text-align: center;
     margin: 0 auto;
 }
 
 .book-image-wrapper img {
-    max-width: 150px;
-    border-radius: 6px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .book-details {
@@ -262,25 +271,40 @@ a:hover {
 }
 
 .book-details h3 {
-    color: var(--primary-color);
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     margin-bottom: 0.5rem;
-    font-family: 'Georgia', serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
 }
 
 .book-title-sub {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
     font-weight: 600;
-    color: var(--secondary-color);
-    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.book-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem !important;
+    color: var(--text-body);
 }
 
 .book-action-text {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--accent-color);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 0.5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--secondary-color);
     display: inline-block;
+    transition: var(--transition);
+}
+
+.book-feature-link:hover .book-action-text {
+    color: var(--primary-color);
 }
 
 /* ==========================================================================
@@ -288,32 +312,33 @@ a:hover {
    ========================================================================== */
 footer {
     background-color: var(--primary-color);
-    color: #E2E8F0;
-    padding: 4rem 1.5rem;
-    margin-top: 5rem;
+    color: #F1F5F9;
+    padding: 5rem 1.5rem;
+    margin-top: 6rem;
     text-align: center;
-    border-top: 4px solid var(--accent-color);
 }
 
 footer .container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 footer .blessing {
-    font-size: clamp(1rem, 2vw, 1.15rem);
+    font-size: 1.1rem;
     font-style: italic;
-    font-family: 'Georgia', serif;
-    color: var(--accent-color);
-    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #F8FAFC;
+    margin-bottom: 2.5rem;
     line-height: 1.8;
+    opacity: 0.9;
 }
 
 footer .copyright {
-    font-size: 0.85rem;
-    color: #A0AEC0;
-    border-top: 1px solid #2B6CB0;
-    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #94A3B8;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    font-weight: 300;
 }
 
 /* ==========================================================================
@@ -322,20 +347,25 @@ footer .copyright {
 @media (max-width: 992px) {
     .layout-wrapper {
         grid-template-columns: 240px 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 }
 
 @media (max-width: 768px) {
     .layout-wrapper {
         grid-template-columns: 1fr; 
-        margin: 1.5rem auto;
+        margin: 2rem auto;
     }
     
     .sidebar {
         position: relative; 
         top: 0;
         margin-bottom: 1rem;
+        background-color: var(--bg-card);
+        padding: 1.5rem;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border-color);
     }
 
     .sidebar nav ul {
@@ -351,6 +381,11 @@ footer .copyright {
     .sidebar nav ul li a {
         padding: 0.6rem;
         font-size: 0.9rem;
+    }
+    
+    .book-feature-link {
+        padding: 1.5rem;
+        gap: 1.5rem;
     }
 }
 
