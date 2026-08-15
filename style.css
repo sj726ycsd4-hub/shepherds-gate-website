@@ -1,10 +1,10 @@
 /* ==========================================================================
-   CSS Variables (Billion-Dollar Studio Palette)
+   CSS Variables (Studio Palette)
    ========================================================================== */
 :root {
-    --primary-color: #0A1128; /* Deep, luxury obsidian */
+    --primary-color: #0A1128; /* Deep obsidian navy */
     --secondary-color: #1F3B73; /* Rich sapphire */
-    --accent-color: #D4AF37; /* Metallic, elegant gold */
+    --accent-color: #D4AF37; /* Burnished gold */
     --text-dark: #111827; 
     --text-body: #374151; 
     --bg-page: #F3F4F6; 
@@ -14,7 +14,7 @@
     --radius-lg: 16px; 
     --radius-md: 8px;
     
-    /* Luxury shadow depths */
+    /* Studio shadow system */
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.03);
     --shadow-float: 0 20px 40px -10px rgba(10, 17, 40, 0.12);
     
@@ -23,7 +23,7 @@
 }
 
 /* ==========================================================================
-   Base & Typography
+   Base Reset & Typography
    ========================================================================== */
 * {
     margin: 0;
@@ -63,7 +63,7 @@ a {
 }
 
 /* ==========================================================================
-   Premium Keyframe Animations
+   Keyframe Animations
    ========================================================================== */
 @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(40px); }
@@ -75,11 +75,9 @@ a {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* The requested continuous Zoom In/Out effect for the banner */
 @keyframes zoomInOut {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
+    0% { transform: scale(1); filter: brightness(1.05); }
+    100% { transform: scale(1.1); filter: brightness(1.12); }
 }
 
 .fade-in-up {
@@ -98,7 +96,7 @@ a {
 .delay-4 { animation-delay: 0.6s; }
 
 /* ==========================================================================
-   Cinematic Hero Banner (With Zoom Animation)
+   Cinematic Hero Banner
    ========================================================================== */
 .hero-banner {
     position: relative;
@@ -115,10 +113,10 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center; 
+    object-position: center 45%; 
     z-index: 1;
-    /* Spicing it up with the alternating zoom in and out */
-    animation: zoomInOut 24s ease-in-out infinite; 
+    filter: brightness(1.08) contrast(1.02);
+    animation: zoomInOut 28s ease-in-out infinite alternate;
 }
 
 .hero-overlay {
@@ -127,12 +125,15 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(10, 17, 40, 0.2) 0%, rgba(10, 17, 40, 0.7) 100%);
+    background: 
+        radial-gradient(circle at 50% 60%, rgba(255, 223, 150, 0.2) 0%, transparent 60%),
+        linear-gradient(to bottom, rgba(10, 17, 40, 0.25) 0%, rgba(10, 17, 40, 0.55) 100%);
     z-index: 2;
+    pointer-events: none;
 }
 
 /* ==========================================================================
-   Frosted Glass Header (Overlaid)
+   Glassmorphic Header
    ========================================================================== */
 .top-header {
     position: absolute;
@@ -179,10 +180,10 @@ a {
 }
 
 /* ==========================================================================
-   Layout & Premium Sidebar Navigation
+   Layout & Sidebar Navigation
    ========================================================================== */
 .layout-wrapper {
-    margin: -4rem auto 5rem; /* Dramatic overlap effect */
+    margin: -4rem auto 5rem;
     padding: 0 1.5rem;
     display: grid;
     grid-template-columns: 280px 1fr; 
@@ -219,7 +220,6 @@ a {
     z-index: 1;
 }
 
-/* Spicy hover effect for the sidebar */
 .sidebar nav ul li a::before {
     content: '';
     position: absolute;
@@ -252,7 +252,7 @@ a {
 .content-block h2 {
     color: var(--primary-color);
     font-size: clamp(2.2rem, 4vw, 3rem);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
 }
@@ -260,7 +260,7 @@ a {
 .content-block h2::after {
     content: "";
     position: absolute;
-    bottom: -10px;
+    bottom: -8px;
     left: 0;
     width: 50%;
     height: 4px;
@@ -273,81 +273,80 @@ a {
 }
 
 /* ==========================================================================
-   3D Animated Clickable Book Card
+   Home Top Grid & Compact Top-Right Book Widget
    ========================================================================== */
-.book-feature-link {
+.home-top-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 2.5rem;
+    align-items: start;
+    margin-bottom: 1.5rem;
+}
+
+.book-feature-compact {
     display: flex;
-    gap: 3.5rem;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     background: #FFFFFF;
-    padding: 3.5rem;
+    padding: 1.5rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
-    margin: 4rem 0;
-    flex-wrap: wrap;
+    border-top: 4px solid var(--accent-color);
     box-shadow: var(--shadow-soft);
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 1000px;
 }
 
-.book-feature-link:hover {
+.book-feature-compact:hover {
     box-shadow: var(--shadow-float);
-    transform: translateY(-10px) rotateX(2deg);
+    transform: translateY(-6px);
     border-color: rgba(212, 175, 55, 0.4);
 }
 
-.book-image-wrapper {
-    flex: 0 0 160px;
-    margin: 0 auto;
-    transition: var(--transition-smooth);
-    transform: translateZ(20px); /* 3D pop effect */
-}
-
-.book-feature-link:hover .book-image-wrapper {
-    transform: translateZ(40px) scale(1.05) rotate(-3deg);
-}
-
-.book-image-wrapper img {
-    width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.25);
-}
-
-.book-details {
-    flex: 1;
-    min-width: 250px;
-    transform: translateZ(10px);
-}
-
-.label-accent {
+.book-feature-compact .label-accent {
     color: var(--accent-color);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
-.book-title-sub {
-    font-size: 1.75rem;
+.book-feature-compact .book-image-wrapper {
+    width: 100px;
+    margin-bottom: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.book-feature-compact:hover .book-image-wrapper {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.book-feature-compact .book-image-wrapper img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
+}
+
+.book-feature-compact .book-title-sub {
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--primary-color);
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+}
+
+.book-feature-compact .book-author {
+    font-size: 0.825rem;
+    color: #6B7280;
     margin-bottom: 1rem;
-    line-height: 1.25;
 }
 
-.book-description {
-    font-size: 1rem;
-    color: var(--text-body);
-    margin-bottom: 1.5rem !important;
-}
-
-.book-action-text {
-    font-size: 0.95rem;
+.book-feature-compact .book-action-text {
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--secondary-color);
     display: inline-flex;
@@ -355,17 +354,17 @@ a {
     transition: var(--transition-fast);
 }
 
-.book-action-text .arrow {
-    margin-left: 0.5rem;
-    transition: var(--transition-fast);
-}
-
-.book-feature-link:hover .book-action-text {
+.book-feature-compact:hover .book-action-text {
     color: var(--accent-color);
 }
 
-.book-feature-link:hover .arrow {
-    transform: translateX(8px);
+.book-feature-compact .arrow {
+    margin-left: 0.35rem;
+    transition: var(--transition-fast);
+}
+
+.book-feature-compact:hover .arrow {
+    transform: translateX(5px);
 }
 
 /* ==========================================================================
@@ -379,7 +378,6 @@ footer {
     position: relative;
 }
 
-/* Thick gradient bar at the top of the footer */
 footer::before {
     content: "";
     position: absolute;
@@ -433,9 +431,14 @@ footer .copyright {
 }
 
 @media (max-width: 768px) {
-    .book-feature-link {
-        padding: 2.5rem 1.5rem;
-        gap: 2rem;
+    .home-top-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .book-feature-compact {
+        max-width: 320px;
+        margin: 0 auto 1.5rem;
     }
     
     .content-block h2::after {
