@@ -96,6 +96,7 @@ a:hover {
     justify-content: center;
     overflow: hidden;
     border-bottom: 5px solid var(--primary-color);
+    /* Retained as a fallback color just in case the internet connection is slow */
     background-color: var(--primary-color);
 }
 
@@ -106,7 +107,7 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center; /* Adjusted for better framing of the new wide image */
+    object-position: center 30%; /* Focuses beautifully on the subject matter */
     z-index: 1;
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -121,7 +122,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Changed to a neutral dark gradient so it doesn't clash with the warm sunset colors */
+    /* Neutral gradient ensures the text stands out over the image without clashing */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.75));
     z-index: 2;
 }
