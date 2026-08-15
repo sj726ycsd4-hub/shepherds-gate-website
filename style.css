@@ -64,43 +64,13 @@ a:hover {
 }
 
 /* ==========================================================================
-   Top Left Logo Header
-   ========================================================================== */
-.top-header {
-    background-color: var(--bg-card);
-    padding: 1.25rem 1.5rem;
-    box-shadow: var(--shadow-sm);
-    border-bottom: 3px solid var(--accent-color);
-    position: relative;
-    z-index: 10;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-}
-
-.header-logo {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    text-decoration: none;
-}
-
-.header-logo h1 {
-    color: var(--primary-color);
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
-    margin: 0;
-    font-weight: 600;
-}
-
-/* ==========================================================================
-   Interactive Hero Banner (Image Only)
+   Interactive Hero Banner (Shorter Height)
    ========================================================================== */
 .hero-banner {
     position: relative;
     width: 100%;
-    height: clamp(300px, 50vh, 550px); 
+    /* Reduced banner height so it doesn't take up the whole screen */
+    height: clamp(200px, 35vh, 400px); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,8 +100,46 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.2));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
     z-index: 2;
+}
+
+/* ==========================================================================
+   Top Left Logo Header (Now overlaid on the banner)
+   ========================================================================== */
+.top-header {
+    /* Placed absolute to overlay the image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Removed solid background */
+    padding: 1.25rem 1.5rem;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    text-decoration: none;
+}
+
+.header-logo h1 {
+    color: #FFFFFF; /* Changed to white to pop against the photo */
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6); /* Shadow added for readability */
+}
+
+.header-logo:hover h1 {
+    color: var(--accent-color);
 }
 
 /* ==========================================================================
