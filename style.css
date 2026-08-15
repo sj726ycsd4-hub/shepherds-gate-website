@@ -1,4 +1,112 @@
 /* ==========================================================================
+   CSS Variables (Billion-Dollar Studio Palette)
+   ========================================================================== */
+:root {
+    --primary-color: #0A1128; /* Deep obsidian navy */
+    --secondary-color: #1F3B73; /* Rich sapphire */
+    --accent-color: #D4AF37; /* Metallic burnished gold */
+    --accent-light: rgba(212, 175, 55, 0.15);
+    --text-dark: #111827; 
+    --text-body: #374151; 
+    --bg-page: #F3F4F6; 
+    --bg-card: #FFFFFF;
+    --border-color: #E5E7EB;
+    
+    --radius-lg: 16px; 
+    --radius-md: 8px;
+    
+    /* Luxury shadow depths */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.03);
+    --shadow-float: 0 20px 40px -10px rgba(10, 17, 40, 0.12);
+    --shadow-glow: 0 0 30px rgba(212, 175, 55, 0.25);
+    
+    --transition-fast: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-luxury: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Base Reset & Typography
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.85;
+    font-size: 1rem;
+    font-weight: 400;
+    overflow-x: hidden; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Keyframe Animations
+   ========================================================================== */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomInOut {
+    0% { transform: scale(1); filter: brightness(1.05) contrast(1.02); }
+    100% { transform: scale(1.1); filter: brightness(1.12) contrast(1.05); }
+}
+
+@keyframes lightRaySweep {
+    0% { transform: translateX(-100%) rotate(25deg); opacity: 0; }
+    30% { opacity: 0.35; }
+    50% { opacity: 0.5; }
+    70% { opacity: 0.35; }
+    100% { transform: translateX(200%) rotate(25deg); opacity: 0; }
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fade-in-down {
+    opacity: 0;
+    animation: fadeInDown 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+.delay-4 { animation-delay: 0.6s; }
+
+/* ==========================================================================
    Billion-Dollar Studio Hero Banner (Interactive & Luxury Hover)
    ========================================================================== */
 .hero-banner {
@@ -12,7 +120,6 @@
     perspective: 1000px;
 }
 
-/* Background image with continuous slow breathe + 3D depth zoom */
 .hero-bg-img {
     position: absolute;
     top: 0;
@@ -28,13 +135,11 @@
     will-change: transform, filter;
 }
 
-/* Luxury Interactive Hover: Smooth scale, warmer saturation, and light bloom */
 .hero-banner:hover .hero-bg-img {
     transform: scale(1.1) translateY(-10px);
     filter: brightness(1.2) contrast(1.08) saturate(1.15);
 }
 
-/* Multi-layer atmospheric vignette overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -49,14 +154,12 @@
     transition: var(--transition-smooth);
 }
 
-/* Sunrise Glow Intensifies on Hover */
 .hero-banner:hover .hero-overlay {
     background: 
         radial-gradient(circle at 50% 55%, rgba(255, 215, 120, 0.4) 0%, transparent 70%),
         linear-gradient(to bottom, rgba(10, 17, 40, 0.15) 0%, rgba(10, 17, 40, 0.6) 100%);
 }
 
-/* Atmospheric Sunbeam Sweep Effect */
 .hero-overlay::after {
     content: "";
     position: absolute;
@@ -77,7 +180,6 @@
     animation: lightRaySweep 14s ease-in-out infinite;
 }
 
-/* Gold Corner Brackets — Top Left & Bottom Right */
 .hero-banner::before {
     content: "";
     position: absolute;
@@ -108,7 +210,6 @@
     opacity: 0.6;
 }
 
-/* Hover Accent: Corner Brackets Expand & Glow */
 .hero-banner:hover::before {
     top: 14px;
     left: 14px;
@@ -153,7 +254,6 @@
     gap: 1.25rem;
 }
 
-/* Metallic Gold Text Shimmer Effect */
 .header-logo h1 {
     font-size: clamp(1.4rem, 3.5vw, 2rem);
     margin: 0;
@@ -178,4 +278,291 @@
 .header-logo:hover .logo-icon {
     transform: rotate(12deg) scale(1.12);
     filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.6));
+}
+
+/* ==========================================================================
+   Layout & Sidebar Navigation
+   ========================================================================== */
+.layout-wrapper {
+    margin: -4rem auto 5rem;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 280px 1fr; 
+    gap: 3.5rem;
+    align-items: start;
+    position: relative;
+    z-index: 5;
+}
+
+.sidebar {
+    position: sticky;
+    top: 2rem;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    background: var(--bg-card);
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: 1rem 1.25rem;
+    color: var(--text-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: var(--radius-md);
+    transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    z-index: 1;
+}
+
+.sidebar nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 0%; height: 100%;
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.1), transparent);
+    z-index: -1;
+    transition: var(--transition-fast);
+}
+
+.sidebar nav ul li a:hover, .sidebar nav ul li a.active {
+    color: var(--primary-color);
+    padding-left: 1.75rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+.sidebar nav ul li a:hover::before, .sidebar nav ul li a.active::before {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Main Content Block
+   ========================================================================== */
+.content-block {
+    background-color: var(--bg-card);
+    padding: clamp(2.5rem, 6vw, 4.5rem);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.content-block h2 {
+    color: var(--primary-color);
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.content-block h2::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), transparent);
+    border-radius: 2px;
+}
+
+.content-block p {
+    margin-bottom: 1.75rem;
+}
+
+.label-accent {
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Home Top Grid & Compact Top-Right Book Widget
+   ========================================================================== */
+.home-top-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 2.5rem;
+    align-items: start;
+    margin-bottom: 1.5rem;
+}
+
+.book-feature-compact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--accent-color);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.book-feature-compact:hover {
+    box-shadow: var(--shadow-float);
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.book-feature-compact .label-accent {
+    color: var(--accent-color);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.book-feature-compact .book-image-wrapper {
+    width: 100px;
+    margin-bottom: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.book-feature-compact:hover .book-image-wrapper {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.book-feature-compact .book-image-wrapper img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
+}
+
+.book-feature-compact .book-title-sub {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+}
+
+.book-feature-compact .book-author {
+    font-size: 0.825rem;
+    color: #6B7280;
+    margin-bottom: 1rem;
+}
+
+.book-feature-compact .book-action-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition-fast);
+}
+
+.book-feature-compact:hover .book-action-text {
+    color: var(--accent-color);
+}
+
+.book-feature-compact .arrow {
+    margin-left: 0.35rem;
+    transition: var(--transition-fast);
+}
+
+.book-feature-compact:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+    background-color: var(--primary-color);
+    color: #F3F4F6;
+    padding: 6rem 1.5rem 4rem;
+    text-align: center;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 6px;
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+}
+
+footer .container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+footer .blessing {
+    font-size: 1.35rem;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    color: #FFFFFF;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+footer .copyright {
+    font-size: 0.85rem;
+    color: #9CA3AF;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints & Mobile Navigation Uniformity Fix
+   ========================================================================== */
+@media (max-width: 992px) {
+    .layout-wrapper {
+        grid-template-columns: 1fr; 
+        margin-top: -3rem;
+    }
+    
+    .sidebar {
+        position: relative; 
+        top: 0;
+    }
+
+    /* Single-column flex list guarantees 100% identical menu layout across all mobile screens */
+    .sidebar nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 1rem;
+    }
+
+    .sidebar nav ul li a {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-top-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .book-feature-compact {
+        max-width: 320px;
+        margin: 0 auto 1.5rem;
+    }
+    
+    .content-block h2::after {
+        width: 80px; 
+    }
+
+    .hero-banner::before,
+    .hero-banner::after {
+        width: 25px;
+        height: 25px;
+    }
 }
